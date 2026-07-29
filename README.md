@@ -94,7 +94,7 @@ Every subfolder that isn't populated yet has its own `README.md` explaining exac
 belongs there and which of your existing three repos it should be copied from — nothing here
 is guessed at or fabricated.
 
-## Getting started on your own machine
+## Getting started on my own machine
 
 **Using fish shell?** See `docs/FISH_SHELL_GUIDE.md` first — venv activation, env vars
 (`ANTHROPIC_API_KEY`, `TNBC_MIN_AF`, etc.), and running each subproject all use different
