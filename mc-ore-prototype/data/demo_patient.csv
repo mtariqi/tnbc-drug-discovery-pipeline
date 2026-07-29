@@ -1,0 +1,7 @@
+gene,alteration_type,expression_log2fc
+EGFR,amplification,2.1
+MET,amplification,1.8
+SRC,missense,0.6
+BRCA1,frameshift,-0.2
+PIK3CA,missense,1.1
+CDK4,amplification,1.4

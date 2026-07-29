@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.env
+.pytest_cache/
+
+# Pipeline cache (joblib.Memory-backed PubMed/DGIdb response cache --
+# regeneratable, not source)
+.pipeline_cache/
+**/.pipeline_cache/
+
+# Run outputs -- patient-level regimen tables, discovery results,
+# exported JSON/CSV, charts. Derived from real patient data (TCGA MAF /
+# clinical files); kept out of git history as a default habit rather than
+# decided case-by-case.
+outputs/*
+!outputs/.gitkeep
+
+# OS cruft
+.DS_Store

@@ -1,0 +1,8 @@
+cancer_context: triple negative breast cancer
+max_papers_per_gene: 10
+api_key: null
+max_patients: null
+max_workers: 8
+cache_dir: ./.pipeline_cache
+output_dir: ./outputs
+min_candidates_for_gap: 2

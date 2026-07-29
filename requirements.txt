@@ -1,0 +1,35 @@
+pandas
+numpy
+scipy
+# scikit-learn: on this machine/Python 3.13 combo, plain pip install falls back to a
+# from-source Cython build that fails. Install via conda BEFORE running
+# `pip install -r requirements.txt`, in every new environment:
+#     conda install -c conda-forge scikit-learn
+scikit-learn
+networkx      # needed by src/data_loaders/string_network_builder.py (betweenness, PageRank)
+
+# Survival analysis — patient_level_survival_model.py has a numpy/scipy fallback built in,
+# but install these for the real thing (elastic net, random survival forest) once available:
+# scikit-survival
+# lifelines
+
+# Explainability — permutation_importance_cox() is the numpy fallback; install for SHAP-based
+# importance instead:
+# shap
+
+# Bio-data access (for src/data_loaders/ once built)
+requests            # STRING, DGIdb, openFDA, PubMed REST/GraphQL calls
+biopython            # PubMed E-utilities convenience wrappers
+
+# R interop, only if TCGAbiolinks stays R-side rather than migrating to a Python GDC client
+# rpy2
+
+pytest
+
+# src/predictive_models/ (GNN-based kinase-response and drug-synergy prediction)
+torch>=2.2
+# rdkit and PyTDC are only needed for real drug-synergy work (SMILES featurization,
+# and PyTDC's pre-resolved DrugComb dataset) -- install once you're running
+# src/predictive_models/train_synergy.py or data/load_tdc_drugsyn.py:
+# rdkit>=2023.9.1
+# PyTDC

@@ -1,0 +1,1525 @@
+{
+  "pipeline_version": "1.0.0",
+  "timestamp": "2026-06-22 21:09:08",
+  "input_vcf": "data/sample/patient_1.vcf",
+  "vcf_summary": {
+    "total_variants": 13,
+    "rtk_nrtk_variants": 10,
+    "genes_detected": [
+      "ERBB2",
+      "SRC",
+      "ABL1",
+      "FGFR1",
+      "ALK",
+      "EGFR",
+      "MET",
+      "FGFR2",
+      "FGFR3"
+    ],
+    "high_severity_variants": [
+      {
+        "chrom": "7",
+        "pos": 55249071,
+        "variant_id": "rs121913428",
+        "ref": "A",
+        "alt": "G",
+        "qual": "PASS",
+        "filter_status": "PASS",
+        "depth": 150,
+        "allele_freq": 0.45,
+        "gene": "EGFR",
+        "effect": "missense_variant",
+        "severity_score": 0.7,
+        "is_rtk_nrtk": true,
+        "kinase_type": "RTK",
+        "kinase_family": "ErbB",
+        "tnbc_relevance": "high"
+      },
+      {
+        "chrom": "7",
+        "pos": 55242470,
+        "variant_id": ".",
+        "ref": "C",
+        "alt": "T",
+        "qual": "PASS",
+        "filter_status": "PASS",
+        "depth": 200,
+        "allele_freq": 0.52,
+        "gene": "EGFR",
+        "effect": "missense_variant",
+        "severity_score": 0.7,
+        "is_rtk_nrtk": true,
+        "kinase_type": "RTK",
+        "kinase_family": "ErbB",
+        "tnbc_relevance": "high"
+      },
+      {
+        "chrom": "10",
+        "pos": 123247514,
+        "variant_id": "rs121913237",
+        "ref": "G",
+        "alt": "A",
+        "qual": "PASS",
+        "filter_status": "PASS",
+        "depth": 180,
+        "allele_freq": 0.38,
+        "gene": "FGFR2",
+        "effect": "missense_variant",
+        "severity_score": 0.7,
+        "is_rtk_nrtk": true,
+        "kinase_type": "RTK",
+        "kinase_family": "FGFR",
+        "tnbc_relevance": "moderate"
+      },
+      {
+        "chrom": "4",
+        "pos": 1807894,
+        "variant_id": "rs121913238",
+        "ref": "C",
+        "alt": "T",
+        "qual": "PASS",
+        "filter_status": "PASS",
+        "depth": 160,
+        "allele_freq": 0.41,
+        "gene": "FGFR3",
+        "effect": "missense_variant",
+        "severity_score": 0.7,
+        "is_rtk_nrtk": true,
+        "kinase_type": "RTK",
+        "kinase_family": "FGFR",
+        "tnbc_relevance": "moderate"
+      },
+      {
+        "chrom": "7",
+        "pos": 116411708,
+        "variant_id": "rs33932119",
+        "ref": "T",
+        "alt": "C",
+        "qual": "PASS",
+        "filter_status": "PASS",
+        "depth": 220,
+        "allele_freq": 0.48,
+        "gene": "MET",
+        "effect": "missense_variant",
+        "severity_score": 0.7,
+        "is_rtk_nrtk": true,
+        "kinase_type": "RTK",
+        "kinase_family": "MET",
+        "tnbc_relevance": "high"
+      },
+      {
+        "chrom": "9",
+        "pos": 107543481,
+        "variant_id": "rs121913500",
+        "ref": "C",
+        "alt": "T",
+        "qual": "PASS",
+        "filter_status": "PASS",
+        "depth": 190,
+        "allele_freq": 0.35,
+        "gene": "ABL1",
+        "effect": "missense_variant",
+        "severity_score": 0.7,
+        "is_rtk_nrtk": true,
+        "kinase_type": "nRTK",
+        "kinase_family": "ABL",
+        "tnbc_relevance": "moderate"
+      },
+      {
+        "chrom": "17",
+        "pos": 37880220,
+        "variant_id": "rs121913263",
+        "ref": "A",
+        "alt": "G",
+        "qual": "PASS",
+        "filter_status": "PASS",
+        "depth": 175,
+        "allele_freq": 0.55,
+        "gene": "ERBB2",
+        "effect": "missense_variant",
+        "severity_score": 0.7,
+        "is_rtk_nrtk": true,
+        "kinase_type": "RTK",
+        "kinase_family": "ErbB",
+        "tnbc_relevance": "moderate"
+      },
+      {
+        "chrom": "1",
+        "pos": 198266834,
+        "variant_id": "rs121913280",
+        "ref": "G",
+        "alt": "A",
+        "qual": "PASS",
+        "filter_status": "PASS",
+        "depth": 140,
+        "allele_freq": 0.29,
+        "gene": "SRC",
+        "effect": "missense_variant",
+        "severity_score": 0.7,
+        "is_rtk_nrtk": true,
+        "kinase_type": "nRTK",
+        "kinase_family": "SRC",
+        "tnbc_relevance": "high"
+      },
+      {
+        "chrom": "2",
+        "pos": 29445217,
+        "variant_id": ".",
+        "ref": "G",
+        "alt": "T",
+        "qual": "PASS",
+        "filter_status": "PASS",
+        "depth": 160,
+        "allele_freq": 0.33,
+        "gene": "ALK",
+        "effect": "missense_variant",
+        "severity_score": 0.7,
+        "is_rtk_nrtk": true,
+        "kinase_type": "RTK",
+        "kinase_family": "ALK/LTK",
+        "tnbc_relevance": "low"
+      },
+      {
+        "chrom": "14",
+        "pos": 23851165,
+        "variant_id": ".",
+        "ref": "C",
+        "alt": "A",
+        "qual": "PASS",
+        "filter_status": "PASS",
+        "depth": 145,
+        "allele_freq": 0.27,
+        "gene": "FGFR1",
+        "effect": "missense_variant",
+        "severity_score": 0.7,
+        "is_rtk_nrtk": true,
+        "kinase_type": "RTK",
+        "kinase_family": "FGFR",
+        "tnbc_relevance": "high"
+      }
+    ]
+  },
+  "redundancy_report": {
+    "affected_genes": [
+      "ABL1",
+      "ALK",
+      "EGFR",
+      "ERBB2",
+      "FGFR1",
+      "FGFR2",
+      "FGFR3",
+      "MET",
+      "SRC"
+    ],
+    "active_pathways": {
+      "MAPK/ERK": [
+        "ERBB2",
+        "SRC",
+        "ABL1",
+        "FGFR1",
+        "ALK",
+        "EGFR",
+        "MET",
+        "FGFR2",
+        "FGFR3"
+      ],
+      "PI3K/AKT": [
+        "ERBB2",
+        "SRC",
+        "FGFR1",
+        "ALK",
+        "EGFR",
+        "MET",
+        "FGFR2",
+        "FGFR3"
+      ],
+      "FAK/integrin": [
+        "SRC"
+      ],
+      "Wnt/\u03b2-catenin": [
+        "ABL1",
+        "MET"
+      ],
+      "DNA damage response": [
+        "ABL1"
+      ],
+      "STAT": [
+        "FGFR1"
+      ],
+      "JAK/STAT": [
+        "ALK",
+        "EGFR"
+      ]
+    },
+    "pathway_redundancy_scores": {
+      "MAPK/ERK": 0.865,
+      "PI3K/AKT": 0.848,
+      "FAK/integrin": 0.0,
+      "Wnt/\u03b2-catenin": 0.444,
+      "DNA damage response": 0.0,
+      "STAT": 0.0,
+      "JAK/STAT": 0.444
+    },
+    "bypass_risk_per_target": [
+      {
+        "gene": "ABL1",
+        "type": "nRTK",
+        "family": "ABL",
+        "tnbc_relevance": "moderate",
+        "pathways": [
+          "Wnt/\u03b2-catenin",
+          "MAPK/ERK",
+          "DNA damage response"
+        ],
+        "bypass_genes": [
+          {
+            "gene": "ERBB2",
+            "shared_pathways": [
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "SRC",
+            "shared_pathways": [
+              "MAPK/ERK"
+            ],
+            "type": "nRTK"
+          },
+          {
+            "gene": "FGFR1",
+            "shared_pathways": [
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "ALK",
+            "shared_pathways": [
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "EGFR",
+            "shared_pathways": [
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "MET",
+            "shared_pathways": [
+              "Wnt/\u03b2-catenin",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "FGFR2",
+            "shared_pathways": [
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "FGFR3",
+            "shared_pathways": [
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          }
+        ],
+        "resistance_mechanisms_present": [
+          "SRC activation"
+        ],
+        "bypass_risk_score": 1.0,
+        "recommendation": "HIGH BYPASS RISK \u2014 combination therapy strongly recommended"
+      },
+      {
+        "gene": "ALK",
+        "type": "RTK",
+        "family": "ALK/LTK",
+        "tnbc_relevance": "low",
+        "pathways": [
+          "PI3K/AKT",
+          "MAPK/ERK",
+          "JAK/STAT"
+        ],
+        "bypass_genes": [
+          {
+            "gene": "ERBB2",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "SRC",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "nRTK"
+          },
+          {
+            "gene": "ABL1",
+            "shared_pathways": [
+              "MAPK/ERK"
+            ],
+            "type": "nRTK"
+          },
+          {
+            "gene": "FGFR1",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "EGFR",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK",
+              "JAK/STAT"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "MET",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "FGFR2",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "FGFR3",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          }
+        ],
+        "resistance_mechanisms_present": [
+          "ALK secondary mutations",
+          "EGFR activation"
+        ],
+        "bypass_risk_score": 1.0,
+        "recommendation": "HIGH BYPASS RISK \u2014 combination therapy strongly recommended"
+      },
+      {
+        "gene": "EGFR",
+        "type": "RTK",
+        "family": "ErbB",
+        "tnbc_relevance": "high",
+        "pathways": [
+          "PI3K/AKT",
+          "MAPK/ERK",
+          "JAK/STAT"
+        ],
+        "bypass_genes": [
+          {
+            "gene": "ERBB2",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "SRC",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "nRTK"
+          },
+          {
+            "gene": "ABL1",
+            "shared_pathways": [
+              "MAPK/ERK"
+            ],
+            "type": "nRTK"
+          },
+          {
+            "gene": "FGFR1",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "ALK",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK",
+              "JAK/STAT"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "MET",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "FGFR2",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "FGFR3",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          }
+        ],
+        "resistance_mechanisms_present": [
+          "MET amplification",
+          "ERBB2 amplification"
+        ],
+        "bypass_risk_score": 1.0,
+        "recommendation": "HIGH BYPASS RISK \u2014 combination therapy strongly recommended"
+      },
+      {
+        "gene": "ERBB2",
+        "type": "RTK",
+        "family": "ErbB",
+        "tnbc_relevance": "moderate",
+        "pathways": [
+          "PI3K/AKT",
+          "MAPK/ERK"
+        ],
+        "bypass_genes": [
+          {
+            "gene": "SRC",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "nRTK"
+          },
+          {
+            "gene": "ABL1",
+            "shared_pathways": [
+              "MAPK/ERK"
+            ],
+            "type": "nRTK"
+          },
+          {
+            "gene": "FGFR1",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "ALK",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "EGFR",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "MET",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "FGFR2",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "FGFR3",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          }
+        ],
+        "resistance_mechanisms_present": [
+          "receptor crosstalk"
+        ],
+        "bypass_risk_score": 1.0,
+        "recommendation": "HIGH BYPASS RISK \u2014 combination therapy strongly recommended"
+      },
+      {
+        "gene": "FGFR1",
+        "type": "RTK",
+        "family": "FGFR",
+        "tnbc_relevance": "high",
+        "pathways": [
+          "PI3K/AKT",
+          "MAPK/ERK",
+          "STAT"
+        ],
+        "bypass_genes": [
+          {
+            "gene": "ERBB2",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "SRC",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "nRTK"
+          },
+          {
+            "gene": "ABL1",
+            "shared_pathways": [
+              "MAPK/ERK"
+            ],
+            "type": "nRTK"
+          },
+          {
+            "gene": "ALK",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "EGFR",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "MET",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "FGFR2",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "FGFR3",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          }
+        ],
+        "resistance_mechanisms_present": [
+          "EGFR activation"
+        ],
+        "bypass_risk_score": 1.0,
+        "recommendation": "HIGH BYPASS RISK \u2014 combination therapy strongly recommended"
+      },
+      {
+        "gene": "FGFR2",
+        "type": "RTK",
+        "family": "FGFR",
+        "tnbc_relevance": "moderate",
+        "pathways": [
+          "PI3K/AKT",
+          "MAPK/ERK"
+        ],
+        "bypass_genes": [
+          {
+            "gene": "ERBB2",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "SRC",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "nRTK"
+          },
+          {
+            "gene": "ABL1",
+            "shared_pathways": [
+              "MAPK/ERK"
+            ],
+            "type": "nRTK"
+          },
+          {
+            "gene": "FGFR1",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "ALK",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "EGFR",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "MET",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "FGFR3",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          }
+        ],
+        "resistance_mechanisms_present": [
+          "FGFR1 bypass"
+        ],
+        "bypass_risk_score": 1.0,
+        "recommendation": "HIGH BYPASS RISK \u2014 combination therapy strongly recommended"
+      },
+      {
+        "gene": "FGFR3",
+        "type": "RTK",
+        "family": "FGFR",
+        "tnbc_relevance": "moderate",
+        "pathways": [
+          "PI3K/AKT",
+          "MAPK/ERK"
+        ],
+        "bypass_genes": [
+          {
+            "gene": "ERBB2",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "SRC",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "nRTK"
+          },
+          {
+            "gene": "ABL1",
+            "shared_pathways": [
+              "MAPK/ERK"
+            ],
+            "type": "nRTK"
+          },
+          {
+            "gene": "FGFR1",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "ALK",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "EGFR",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "MET",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "FGFR2",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          }
+        ],
+        "resistance_mechanisms_present": [
+          "FGFR2 bypass"
+        ],
+        "bypass_risk_score": 1.0,
+        "recommendation": "HIGH BYPASS RISK \u2014 combination therapy strongly recommended"
+      },
+      {
+        "gene": "MET",
+        "type": "RTK",
+        "family": "MET",
+        "tnbc_relevance": "high",
+        "pathways": [
+          "PI3K/AKT",
+          "MAPK/ERK",
+          "Wnt/\u03b2-catenin"
+        ],
+        "bypass_genes": [
+          {
+            "gene": "ERBB2",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "SRC",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "nRTK"
+          },
+          {
+            "gene": "ABL1",
+            "shared_pathways": [
+              "Wnt/\u03b2-catenin",
+              "MAPK/ERK"
+            ],
+            "type": "nRTK"
+          },
+          {
+            "gene": "FGFR1",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "ALK",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "EGFR",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "FGFR2",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "FGFR3",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          }
+        ],
+        "resistance_mechanisms_present": [
+          "EGFR activation"
+        ],
+        "bypass_risk_score": 1.0,
+        "recommendation": "HIGH BYPASS RISK \u2014 combination therapy strongly recommended"
+      },
+      {
+        "gene": "SRC",
+        "type": "nRTK",
+        "family": "SRC",
+        "tnbc_relevance": "high",
+        "pathways": [
+          "PI3K/AKT",
+          "MAPK/ERK",
+          "FAK/integrin"
+        ],
+        "bypass_genes": [
+          {
+            "gene": "ERBB2",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "ABL1",
+            "shared_pathways": [
+              "MAPK/ERK"
+            ],
+            "type": "nRTK"
+          },
+          {
+            "gene": "FGFR1",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "ALK",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "EGFR",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "MET",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "FGFR2",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          },
+          {
+            "gene": "FGFR3",
+            "shared_pathways": [
+              "PI3K/AKT",
+              "MAPK/ERK"
+            ],
+            "type": "RTK"
+          }
+        ],
+        "resistance_mechanisms_present": [
+          "ABL1 activation"
+        ],
+        "bypass_risk_score": 1.0,
+        "recommendation": "HIGH BYPASS RISK \u2014 combination therapy strongly recommended"
+      }
+    ],
+    "combination_therapy_suggestions": [
+      {
+        "target_gene_1": "ERBB2",
+        "target_gene_2": "SRC",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ERBB2 and SRC activate MAPK/ERK. Inhibiting only ERBB2 risks compensation via SRC.",
+        "suggested_drugs_gene1": [
+          "Trastuzumab",
+          "Lapatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Dasatinib",
+          "Bosutinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "ERBB2",
+        "target_gene_2": "FGFR1",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ERBB2 and FGFR1 activate MAPK/ERK. Inhibiting only ERBB2 risks compensation via FGFR1.",
+        "suggested_drugs_gene1": [
+          "Trastuzumab",
+          "Lapatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib",
+          "Pemigatinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "ERBB2",
+        "target_gene_2": "EGFR",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ERBB2 and EGFR activate MAPK/ERK. Inhibiting only ERBB2 risks compensation via EGFR.",
+        "suggested_drugs_gene1": [
+          "Trastuzumab",
+          "Lapatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erlotinib",
+          "Gefitinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "ERBB2",
+        "target_gene_2": "MET",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ERBB2 and MET activate MAPK/ERK. Inhibiting only ERBB2 risks compensation via MET.",
+        "suggested_drugs_gene1": [
+          "Trastuzumab",
+          "Lapatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Crizotinib",
+          "Cabozantinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "SRC",
+        "target_gene_2": "ABL1",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both SRC and ABL1 activate MAPK/ERK. Inhibiting only SRC risks compensation via ABL1.",
+        "suggested_drugs_gene1": [
+          "Dasatinib",
+          "Bosutinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Imatinib",
+          "Dasatinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "SRC",
+        "target_gene_2": "FGFR1",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both SRC and FGFR1 activate MAPK/ERK. Inhibiting only SRC risks compensation via FGFR1.",
+        "suggested_drugs_gene1": [
+          "Dasatinib",
+          "Bosutinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib",
+          "Pemigatinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "SRC",
+        "target_gene_2": "EGFR",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both SRC and EGFR activate MAPK/ERK. Inhibiting only SRC risks compensation via EGFR.",
+        "suggested_drugs_gene1": [
+          "Dasatinib",
+          "Bosutinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erlotinib",
+          "Gefitinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "SRC",
+        "target_gene_2": "MET",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both SRC and MET activate MAPK/ERK. Inhibiting only SRC risks compensation via MET.",
+        "suggested_drugs_gene1": [
+          "Dasatinib",
+          "Bosutinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Crizotinib",
+          "Cabozantinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "SRC",
+        "target_gene_2": "FGFR2",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both SRC and FGFR2 activate MAPK/ERK. Inhibiting only SRC risks compensation via FGFR2.",
+        "suggested_drugs_gene1": [
+          "Dasatinib",
+          "Bosutinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib",
+          "Infigratinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "SRC",
+        "target_gene_2": "FGFR3",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both SRC and FGFR3 activate MAPK/ERK. Inhibiting only SRC risks compensation via FGFR3.",
+        "suggested_drugs_gene1": [
+          "Dasatinib",
+          "Bosutinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "ABL1",
+        "target_gene_2": "FGFR1",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ABL1 and FGFR1 activate MAPK/ERK. Inhibiting only ABL1 risks compensation via FGFR1.",
+        "suggested_drugs_gene1": [
+          "Imatinib",
+          "Dasatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib",
+          "Pemigatinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "ABL1",
+        "target_gene_2": "EGFR",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ABL1 and EGFR activate MAPK/ERK. Inhibiting only ABL1 risks compensation via EGFR.",
+        "suggested_drugs_gene1": [
+          "Imatinib",
+          "Dasatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erlotinib",
+          "Gefitinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "ABL1",
+        "target_gene_2": "MET",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ABL1 and MET activate MAPK/ERK. Inhibiting only ABL1 risks compensation via MET.",
+        "suggested_drugs_gene1": [
+          "Imatinib",
+          "Dasatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Crizotinib",
+          "Cabozantinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "FGFR1",
+        "target_gene_2": "EGFR",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both FGFR1 and EGFR activate MAPK/ERK. Inhibiting only FGFR1 risks compensation via EGFR.",
+        "suggested_drugs_gene1": [
+          "Erdafitinib",
+          "Pemigatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erlotinib",
+          "Gefitinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "FGFR1",
+        "target_gene_2": "MET",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both FGFR1 and MET activate MAPK/ERK. Inhibiting only FGFR1 risks compensation via MET.",
+        "suggested_drugs_gene1": [
+          "Erdafitinib",
+          "Pemigatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Crizotinib",
+          "Cabozantinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "FGFR1",
+        "target_gene_2": "FGFR2",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both FGFR1 and FGFR2 activate MAPK/ERK. Inhibiting only FGFR1 risks compensation via FGFR2.",
+        "suggested_drugs_gene1": [
+          "Erdafitinib",
+          "Pemigatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib",
+          "Infigratinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "FGFR1",
+        "target_gene_2": "FGFR3",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both FGFR1 and FGFR3 activate MAPK/ERK. Inhibiting only FGFR1 risks compensation via FGFR3.",
+        "suggested_drugs_gene1": [
+          "Erdafitinib",
+          "Pemigatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "EGFR",
+        "target_gene_2": "MET",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both EGFR and MET activate MAPK/ERK. Inhibiting only EGFR risks compensation via MET.",
+        "suggested_drugs_gene1": [
+          "Erlotinib",
+          "Gefitinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Crizotinib",
+          "Cabozantinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "EGFR",
+        "target_gene_2": "FGFR2",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both EGFR and FGFR2 activate MAPK/ERK. Inhibiting only EGFR risks compensation via FGFR2.",
+        "suggested_drugs_gene1": [
+          "Erlotinib",
+          "Gefitinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib",
+          "Infigratinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "EGFR",
+        "target_gene_2": "FGFR3",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both EGFR and FGFR3 activate MAPK/ERK. Inhibiting only EGFR risks compensation via FGFR3.",
+        "suggested_drugs_gene1": [
+          "Erlotinib",
+          "Gefitinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "MET",
+        "target_gene_2": "FGFR2",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both MET and FGFR2 activate MAPK/ERK. Inhibiting only MET risks compensation via FGFR2.",
+        "suggested_drugs_gene1": [
+          "Crizotinib",
+          "Cabozantinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib",
+          "Infigratinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "MET",
+        "target_gene_2": "FGFR3",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both MET and FGFR3 activate MAPK/ERK. Inhibiting only MET risks compensation via FGFR3.",
+        "suggested_drugs_gene1": [
+          "Crizotinib",
+          "Cabozantinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib"
+        ],
+        "evidence_strength": "strong"
+      },
+      {
+        "target_gene_1": "ERBB2",
+        "target_gene_2": "ABL1",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ERBB2 and ABL1 activate MAPK/ERK. Inhibiting only ERBB2 risks compensation via ABL1.",
+        "suggested_drugs_gene1": [
+          "Trastuzumab",
+          "Lapatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Imatinib",
+          "Dasatinib"
+        ],
+        "evidence_strength": "moderate"
+      },
+      {
+        "target_gene_1": "ERBB2",
+        "target_gene_2": "ALK",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ERBB2 and ALK activate MAPK/ERK. Inhibiting only ERBB2 risks compensation via ALK.",
+        "suggested_drugs_gene1": [
+          "Trastuzumab",
+          "Lapatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Crizotinib",
+          "Alectinib"
+        ],
+        "evidence_strength": "moderate"
+      },
+      {
+        "target_gene_1": "ERBB2",
+        "target_gene_2": "FGFR2",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ERBB2 and FGFR2 activate MAPK/ERK. Inhibiting only ERBB2 risks compensation via FGFR2.",
+        "suggested_drugs_gene1": [
+          "Trastuzumab",
+          "Lapatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib",
+          "Infigratinib"
+        ],
+        "evidence_strength": "moderate"
+      },
+      {
+        "target_gene_1": "ERBB2",
+        "target_gene_2": "FGFR3",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ERBB2 and FGFR3 activate MAPK/ERK. Inhibiting only ERBB2 risks compensation via FGFR3.",
+        "suggested_drugs_gene1": [
+          "Trastuzumab",
+          "Lapatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib"
+        ],
+        "evidence_strength": "moderate"
+      },
+      {
+        "target_gene_1": "SRC",
+        "target_gene_2": "ALK",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both SRC and ALK activate MAPK/ERK. Inhibiting only SRC risks compensation via ALK.",
+        "suggested_drugs_gene1": [
+          "Dasatinib",
+          "Bosutinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Crizotinib",
+          "Alectinib"
+        ],
+        "evidence_strength": "moderate"
+      },
+      {
+        "target_gene_1": "ABL1",
+        "target_gene_2": "ALK",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ABL1 and ALK activate MAPK/ERK. Inhibiting only ABL1 risks compensation via ALK.",
+        "suggested_drugs_gene1": [
+          "Imatinib",
+          "Dasatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Crizotinib",
+          "Alectinib"
+        ],
+        "evidence_strength": "moderate"
+      },
+      {
+        "target_gene_1": "ABL1",
+        "target_gene_2": "FGFR2",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ABL1 and FGFR2 activate MAPK/ERK. Inhibiting only ABL1 risks compensation via FGFR2.",
+        "suggested_drugs_gene1": [
+          "Imatinib",
+          "Dasatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib",
+          "Infigratinib"
+        ],
+        "evidence_strength": "moderate"
+      },
+      {
+        "target_gene_1": "ABL1",
+        "target_gene_2": "FGFR3",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ABL1 and FGFR3 activate MAPK/ERK. Inhibiting only ABL1 risks compensation via FGFR3.",
+        "suggested_drugs_gene1": [
+          "Imatinib",
+          "Dasatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib"
+        ],
+        "evidence_strength": "moderate"
+      },
+      {
+        "target_gene_1": "FGFR1",
+        "target_gene_2": "ALK",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both FGFR1 and ALK activate MAPK/ERK. Inhibiting only FGFR1 risks compensation via ALK.",
+        "suggested_drugs_gene1": [
+          "Erdafitinib",
+          "Pemigatinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Crizotinib",
+          "Alectinib"
+        ],
+        "evidence_strength": "moderate"
+      },
+      {
+        "target_gene_1": "ALK",
+        "target_gene_2": "EGFR",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ALK and EGFR activate MAPK/ERK. Inhibiting only ALK risks compensation via EGFR.",
+        "suggested_drugs_gene1": [
+          "Crizotinib",
+          "Alectinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erlotinib",
+          "Gefitinib"
+        ],
+        "evidence_strength": "moderate"
+      },
+      {
+        "target_gene_1": "ALK",
+        "target_gene_2": "MET",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ALK and MET activate MAPK/ERK. Inhibiting only ALK risks compensation via MET.",
+        "suggested_drugs_gene1": [
+          "Crizotinib",
+          "Alectinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Crizotinib",
+          "Cabozantinib"
+        ],
+        "evidence_strength": "moderate"
+      },
+      {
+        "target_gene_1": "ALK",
+        "target_gene_2": "FGFR2",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ALK and FGFR2 activate MAPK/ERK. Inhibiting only ALK risks compensation via FGFR2.",
+        "suggested_drugs_gene1": [
+          "Crizotinib",
+          "Alectinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib",
+          "Infigratinib"
+        ],
+        "evidence_strength": "moderate"
+      },
+      {
+        "target_gene_1": "ALK",
+        "target_gene_2": "FGFR3",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both ALK and FGFR3 activate MAPK/ERK. Inhibiting only ALK risks compensation via FGFR3.",
+        "suggested_drugs_gene1": [
+          "Crizotinib",
+          "Alectinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib"
+        ],
+        "evidence_strength": "moderate"
+      },
+      {
+        "target_gene_1": "FGFR2",
+        "target_gene_2": "FGFR3",
+        "shared_pathway": "MAPK/ERK",
+        "rationale": "Both FGFR2 and FGFR3 activate MAPK/ERK. Inhibiting only FGFR2 risks compensation via FGFR3.",
+        "suggested_drugs_gene1": [
+          "Erdafitinib",
+          "Infigratinib"
+        ],
+        "suggested_drugs_gene2": [
+          "Erdafitinib"
+        ],
+        "evidence_strength": "moderate"
+      }
+    ]
+  }
+}

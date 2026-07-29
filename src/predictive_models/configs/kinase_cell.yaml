@@ -1,0 +1,79 @@
+seed: 2026
+model:
+  latent_dim: 256
+  dropout: 0.10
+  network_layers: 3
+  # Explicit rather than inferred from label arrays -- lets the model build even
+  # when a head (pathway) has no real training label yet (see loss_weights below).
+  response_dim: 1     # real target: DepMap dependency_prob (scalar per cell_line x kinase row)
+  pathway_dim: 12      # inert placeholder while pathway_scores has weight=0 -- no real label exists yet
+cell_state:
+  modalities:
+    # Per-cell-line profile ACROSS THE 90-KINASE PANEL (not the single kinase being
+    # tested -- that's the perturbation encoder's job via gene_ids/target_mask).
+    # transcriptomics/cnv/mutation come from DepMap Omics files, real per-cell-line
+    # data, once depmap_multiomic_loader.py is wired in.
+    transcriptomics: 90
+    cnv: 90
+    mutation: 90
+    # proteomics/phosphoproteomics: CPTAC data already on hand
+    # (cptac-proteomics-validation/data/BRCA_UMICH_proteomics_RTK_NRTK.csv) is at the
+    # PATIENT level, not the DepMap CELL-LINE level -- there is no shared identifier
+    # to join them. Until/unless a cell-line-level proteomics dataset is found, these
+    # two modalities will be marked fully missing (modality_mask all-zero) for every
+    # DepMap-sourced training row -- CellStateEncoder's missing-modality gating
+    # handles this correctly already, this is not a gap that needs new code.
+    proteomics: 32
+    phosphoproteomics: 192
+perturbation:
+  directions:
+    padding: 0
+    activation: 1
+    knockout_or_knockdown: 2
+    pharmacological_inhibition: 3
+network:
+  minimum_string_score: 700
+  node_evidence:
+    - string_centrality
+    - depmap_essentiality
+    - survival_score
+    - druggability
+    - cts
+    - is_rtk
+  edge_evidence:
+    - string_score
+    - coexpression
+    - mutation_cooccurrence
+    - substrate_jaccard
+    - redundancy
+outputs:
+  response_space: gene_delta
+  pathway_scores: true
+  predictive_uncertainty: true
+  redundancy_score: true
+data:
+  # Point this at your real loader's output once depmap_multiomic_loader.py /
+  # depmap_supplemental_loader.py are wired in; the synthetic generator produces
+  # the same array names/shapes for smoke testing in the meantime.
+  path: data/processed/kinase_synthetic.npz
+  split: unseen_context    # real target: generalize to an unseen cell line, matching GroupKFold-by-cell_line_id in dependency_ml_model.py
+  val_fraction: 0.15
+  test_fraction: 0.20
+training:
+  epochs: 40
+  batch_size: 64
+  learning_rate: 0.0003
+  weight_decay: 0.00001
+  patience: 6
+  loss_weights:
+    response: 1.0
+    # Zeroed: no real label exists yet for either head (docs/limitations.md states
+    # plainly there's no combination-synergy data and no pathway-activity ground
+    # truth). Training against an invented proxy would break this project's own
+    # real-data-only discipline. Flip back to >0 once real labels exist -- the
+    # training loop already skips a head entirely (no label required) when its
+    # weight is 0, so this is a one-line change when that day comes.
+    redundancy: 0.0
+    pathway: 0.0
+output_dir: outputs/kinase_cell
+

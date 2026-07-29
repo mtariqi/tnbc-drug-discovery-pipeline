@@ -1,0 +1,36 @@
+echo '# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Environments
+.venv/
+venv/
+*.env
+
+# Real third-party BULK data only (by file type, not by folder) -- keeps
+# small curated project files like data/raw/kinases/kinase_90_list.txt
+*.pkl
+*.h5ad
+data/raw/**/*.csv
+data/raw/**/*.tsv
+data/raw/**/*.maf
+data/raw/**/*.maf.gz
+data/processed/**/*.npz
+data/processed/**/*.csv
+cptac-proteomics-validation/data/*.csv
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Model checkpoints / training artifacts
+outputs/**/*.pt
+outputs/**/*.pth
+
+# OS / editor cruft
+.DS_Store
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/' > .gitignore

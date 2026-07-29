@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tnbc-regimen-pipeline"
+version = "3.0.0"
+description = "A multi-layered TNBC regimen discovery and cohort-wide scoring pipeline."
+authors = [
+    { name = "Tariq Md", email = "your_email@example.com" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+
+# Floors set to what was actually tested (2026-07-13); >= rather than ==
+# trades strict reproducibility for easier installation alongside other
+# packages. If exact reproducibility matters more for your use case than
+# installability, pin these back to == and re-test the exact versions in
+# this file's git history.
+dependencies = [
+    "pandas>=3.0",
+    "requests>=2.33",
+    "PyYAML>=6.0",
+    "joblib>=1.5",
+    "matplotlib>=3.10",
+    "click>=8.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/tnbc-regimen-pipeline"
+Issues = "https://github.com/yourusername/tnbc-regimen-pipeline/issues"
+
+[project.scripts]
+tnbc-pipeline = "tnbc_regimen_pipeline.cli.main:main"
+
+[tool.setuptools.packages.find]
+include = ["tnbc_regimen_pipeline*"]
+
+[tool.setuptools.package-data]
+tnbc_regimen_pipeline = ["config/config.yaml"]

@@ -1,0 +1,118 @@
+
+FINAL RTK-NRTK CO-EXPRESSION NETWORK ANALYSIS
+=============================================
+Analysis Date: 2026-02-11 02:09:52.014711
+
+SUMMARY
+-------
+• Breast cancer samples analyzed: 151
+• Genes in network: 18
+• Significant correlations visualized: 30
+• RTKs identified: 9
+• NRTKs identified: 13
+
+NETWORK PROPERTIES
+------------------
+• Average node degree: 3.33
+• Network density: 0.196
+• Connected components: 1
+
+TOP CORRELATIONS
+----------------
+1. ERBB3 (RTK) ↔ ABL1 (NRTK)
+   • Correlation: 0.506 (Positive)
+   • P-value: 3.31e-11
+   • FDR: 4.35e-10 (Significant (FDR < 0.05))
+
+2. PDGFRB (RTK) ↔ FYN (NRTK)
+   • Correlation: 0.506 (Positive)
+   • P-value: 3.43e-11
+   • FDR: 4.35e-10 (Significant (FDR < 0.05))
+
+3. PDGFRB (RTK) ↔ ABL2 (NRTK)
+   • Correlation: -0.501 (Negative)
+   • P-value: 5.98e-11
+   • FDR: 5.23e-10 (Significant (FDR < 0.05))
+
+4. PDGFRB (RTK) ↔ JAK1 (NRTK)
+   • Correlation: 0.490 (Positive)
+   • P-value: 1.72e-10
+   • FDR: 1.39e-09 (Significant (FDR < 0.05))
+
+5. ERBB3 (RTK) ↔ FYN (NRTK)
+   • Correlation: -0.477 (Negative)
+   • P-value: 5.77e-10
+   • FDR: 4.33e-09 (Significant (FDR < 0.05))
+
+6. EGFR (RTK) ↔ YES1 (NRTK)
+   • Correlation: 0.411 (Positive)
+   • P-value: 1.64e-07
+   • FDR: 8.94e-07 (Significant (FDR < 0.05))
+
+7. EGFR (RTK) ↔ ABL2 (NRTK)
+   • Correlation: -0.407 (Negative)
+   • P-value: 2.15e-07
+   • FDR: 1.07e-06 (Significant (FDR < 0.05))
+
+8. ERBB3 (RTK) ↔ LYN (NRTK)
+   • Correlation: -0.407 (Negative)
+   • P-value: 2.15e-07
+   • FDR: 1.07e-06 (Significant (FDR < 0.05))
+
+9. FGFR1 (RTK) ↔ ABL2 (NRTK)
+   • Correlation: -0.400 (Negative)
+   • P-value: 3.56e-07
+   • FDR: 1.63e-06 (Significant (FDR < 0.05))
+
+10. EGFR (RTK) ↔ FYN (NRTK)
+   • Correlation: 0.395 (Positive)
+   • P-value: 5.24e-07
+   • FDR: 2.29e-06 (Significant (FDR < 0.05))
+
+
+KEY FINDINGS
+------------
+1. Network reveals 14 positive 
+   and 16 negative correlations.
+
+2. The strongest correlation is between ERBB3 and 
+   ABL1 (r = 0.506).
+
+3. Genes with highest connectivity (potential hubs):
+   1. ERBB4 (RTK): 7 connections
+   2. ABL2 (NRTK): 6 connections
+   3. ERBB3 (RTK): 6 connections
+   4. FYN (NRTK): 5 connections
+   5. EGFR (RTK): 5 connections
+
+INTERPRETATION
+--------------
+This network visualization reveals coordinated expression patterns between 
+Receptor Tyrosine Kinases (RTKs) and Non-Receptor Tyrosine Kinases (NRTKs) 
+in breast cancer. Strong correlations suggest:
+
+1. Co-regulation within signaling pathways
+2. Potential protein-protein interactions
+3. Coordinated response to oncogenic signals
+4. Possible therapeutic targets for combination therapy
+
+FILES GENERATED
+---------------
+1. final_rtk_nrtk_network.html - Interactive network visualization
+2. final_rtk_nrtk_dashboard.html - Comprehensive analysis dashboard
+3. final_rtk_nrtk_results.csv - Detailed correlation results
+4. PNG images for publications
+
+HOW TO USE
+----------
+• Open the HTML files in any web browser
+• Hover over nodes/edges for detailed information
+• Zoom and pan to explore the network
+• Use the dashboard for comprehensive analysis
+
+NEXT STEPS
+----------
+1. Validate findings in independent datasets
+2. Investigate biological pathways for top correlations
+3. Explore clinical correlations with patient outcomes
+4. Consider experimental validation of key interactions

@@ -1,0 +1,16 @@
+combination,genes,predicted_synergy_score,safety_flag,toxicity_overlap,n_drugs,rationale,recommended_first_pilot
+erlotinib + crizotinib,EGFR+MET,0.65,True,hepatotoxic,2,EGFR+MET co-alteration suggests combining erlotinib and crizotinib (predicted synergy 0.65). Safety Agent flags overlapping hepatotoxic risk.,False
+erlotinib + capmatinib,EGFR+MET,0.4,True,hepatotoxic,2,EGFR+MET co-alteration suggests combining erlotinib and capmatinib (predicted synergy 0.4). Safety Agent flags overlapping hepatotoxic risk.,False
+gefitinib + crizotinib,EGFR+MET,0.4,True,hepatotoxic,2,EGFR+MET co-alteration suggests combining gefitinib and crizotinib (predicted synergy 0.4). Safety Agent flags overlapping hepatotoxic risk.,False
+gefitinib + capmatinib,EGFR+MET,0.4,True,hepatotoxic,2,EGFR+MET co-alteration suggests combining gefitinib and capmatinib (predicted synergy 0.4). Safety Agent flags overlapping hepatotoxic risk.,False
+afatinib + crizotinib,EGFR+MET,0.4,False,none,2,EGFR+MET co-alteration suggests combining afatinib and crizotinib (predicted synergy 0.4). Safety Agent finds no overlapping toxicity flags in the curated table.,True
+afatinib + capmatinib,EGFR+MET,0.4,False,none,2,EGFR+MET co-alteration suggests combining afatinib and capmatinib (predicted synergy 0.4). Safety Agent finds no overlapping toxicity flags in the curated table.,False
+erlotinib + dasatinib,EGFR+SRC,0.4,False,none,2,EGFR+SRC co-alteration suggests combining erlotinib and dasatinib (predicted synergy 0.4). Safety Agent finds no overlapping toxicity flags in the curated table.,False
+erlotinib + bosutinib,EGFR+SRC,0.4,True,hepatotoxic,2,EGFR+SRC co-alteration suggests combining erlotinib and bosutinib (predicted synergy 0.4). Safety Agent flags overlapping hepatotoxic risk.,False
+gefitinib + dasatinib,EGFR+SRC,0.4,False,none,2,EGFR+SRC co-alteration suggests combining gefitinib and dasatinib (predicted synergy 0.4). Safety Agent finds no overlapping toxicity flags in the curated table.,False
+gefitinib + bosutinib,EGFR+SRC,0.4,True,hepatotoxic,2,EGFR+SRC co-alteration suggests combining gefitinib and bosutinib (predicted synergy 0.4). Safety Agent flags overlapping hepatotoxic risk.,False
+afatinib + dasatinib,EGFR+SRC,0.4,False,none,2,EGFR+SRC co-alteration suggests combining afatinib and dasatinib (predicted synergy 0.4). Safety Agent finds no overlapping toxicity flags in the curated table.,False
+afatinib + bosutinib,EGFR+SRC,0.4,False,none,2,EGFR+SRC co-alteration suggests combining afatinib and bosutinib (predicted synergy 0.4). Safety Agent finds no overlapping toxicity flags in the curated table.,False
+erlotinib + alpelisib,EGFR+PIK3CA,0.4,True,hepatotoxic,2,EGFR+PIK3CA co-alteration suggests combining erlotinib and alpelisib (predicted synergy 0.4). Safety Agent flags overlapping hepatotoxic risk.,False
+afatinib + alpelisib,EGFR+PIK3CA,0.4,False,none,2,EGFR+PIK3CA co-alteration suggests combining afatinib and alpelisib (predicted synergy 0.4). Safety Agent finds no overlapping toxicity flags in the curated table.,False
+gefitinib + alpelisib,EGFR+PIK3CA,0.4,True,hepatotoxic,2,EGFR+PIK3CA co-alteration suggests combining gefitinib and alpelisib (predicted synergy 0.4). Safety Agent flags overlapping hepatotoxic risk.,False

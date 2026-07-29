@@ -1,0 +1,19 @@
+seed: 11
+data:
+  path: data/processed/synergy_tdc.npz
+  split: unseen_drug   # or unseen_context -- see cellforge/data/synergy_splits.py
+  val_fraction: 0.15
+  test_fraction: 0.20
+model:
+  latent_dim: 128
+  gnn_layers: 3
+  cell_embedding_dim: 32
+  dropout: 0.1
+  synergy_metrics: [bliss, loewe, hsa, zip]
+training:
+  epochs: 40
+  batch_size: 64
+  learning_rate: 0.0003
+  weight_decay: 0.00001
+  patience: 6
+output_dir: outputs/synergy
