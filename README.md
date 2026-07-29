@@ -1,3 +1,12 @@
+![banner](docs/banner.png)
+
+# TNBC Drug Discovery Pipeline
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-GNN%20models-ee4c2c.svg)](https://pytorch.org/)
+[![Status](https://img.shields.io/badge/status-manuscript%20in%20submission-orange.svg)]()
+[![DOI](https://img.shields.io/badge/DOI-pending%20Zenodo%20archive-lightgrey.svg)]()
 # TNBC Kinase-Redundancy, Drug-Regimen, and Cohort-Scale ML Project
 
 Consolidated repository combining three previously-separate GitHub repos
