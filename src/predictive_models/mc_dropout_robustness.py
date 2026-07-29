@@ -161,11 +161,20 @@ def main():
                          help="Randomly subsample to this many candidate rows for a fast first "
                               "run (230k rows x 100 MC samples otherwise = ~23M forward-pass-"
                               "equivalents, batching prevents a crash but not a long runtime). "
-                              "Pass a larger value, or omit for the full dataset.")
+                              "Pass a larger value, or omit for the full test set.")
+    parser.add_argument("--candidate-pool", choices=["test", "all"], default="test",
+                         help="'test' (default, correct for a real robustness ranking): restrict "
+                              "candidates to the held-out unseen-drug test split, using the same "
+                              "split as evaluate_synergy.py. 'all': every row in the dataset, "
+                              "train+val+test mixed -- WILL surface memorized training rows as "
+                              "falsely 'confident, robust' top recommendations (confirmed: a real "
+                              "run with this candidate pool put a training-set row, not a held-out "
+                              "prediction, at the top of every metric). Only use 'all' if you "
+                              "specifically want to inspect training-set behavior.")
     args = parser.parse_args()
 
     config = load_config(args.config)
-    arrays = dict(np.load(config["data"]["path"]))
+    arrays = dict(np.load(config["data"]["path"], allow_pickle=True))
 
     with open(Path(config["output_dir"]) / "training.json") as f:
         train_info = json.load(f)
@@ -179,16 +188,30 @@ def main():
     drug_adj = torch.tensor(arrays["drug_adjacency"]).float()
     drug_mask = torch.tensor(arrays["drug_atom_mask"]).float()
 
-    row_ids = arrays["drug_row"]
-    col_ids = arrays["drug_col"]
-    cell_line_ids = arrays["cell_line_id"]
+    if args.candidate_pool == "test":
+        from src.predictive_models.data.synergy_splits import unseen_drug_split
+        split = unseen_drug_split(
+            arrays["drug_row"], arrays["drug_col"],
+            config["data"]["val_fraction"], config["data"]["test_fraction"], config["seed"],
+        )
+        pool_idx = split.test
+        print(f"Restricting candidates to the held-out TEST split ({len(pool_idx)} rows) -- "
+              f"genuinely unseen drug pairs only, per --candidate-pool test (default).")
+    else:
+        pool_idx = np.arange(len(arrays["drug_row"]))
+        print(f"WARNING: --candidate-pool all includes {len(pool_idx)} rows spanning train+val+test. "
+              f"Any top-ranked result may be a memorized training row, not a genuine prediction.")
+
+    row_ids = arrays["drug_row"][pool_idx]
+    col_ids = arrays["drug_col"][pool_idx]
+    cell_line_ids = arrays["cell_line_id"][pool_idx]
 
     if args.max_candidates is not None and args.max_candidates < len(row_ids):
         rng = np.random.default_rng(0)
         keep = rng.choice(len(row_ids), size=args.max_candidates, replace=False)
         row_ids, col_ids, cell_line_ids = row_ids[keep], col_ids[keep], cell_line_ids[keep]
-        print(f"Subsampled to {args.max_candidates} of {len(arrays['drug_row'])} candidate rows "
-              f"(--max-candidates 0 or a larger value for the full dataset).")
+        print(f"Subsampled to {args.max_candidates} of {len(pool_idx)} candidate rows "
+              f"(--max-candidates 0 or a larger value for the full pool).")
 
     cell_ids = torch.tensor(cell_line_ids).long()
 
