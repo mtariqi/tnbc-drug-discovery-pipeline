@@ -98,7 +98,8 @@ tnbc-project/
 │   └── reports/        # findings reports
 ├── docs/                # methodology, data provenance, limitations
 └── scripts/             # CLI entry points wiring loaders through to src/ modules
-```
+`
+``
 ```
 graph TD
     %% Custom Styling for Publication Quality
@@ -140,6 +141,7 @@ graph TD
         D2 --> E2["Extract discriminative multi-omic features<br/><i>(Component 1/2 latent variables)</i>"] :::outputs
         D3 --> E3["Map enriched oncogenic hallmark pathways<br/><i>(Notch, PI3K/AKT/mTOR, TGF-β)</i>"] :::outputs
     end
+```
 ```
 ## Getting started
 
