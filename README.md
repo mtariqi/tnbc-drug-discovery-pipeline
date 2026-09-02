@@ -101,66 +101,89 @@ tnbc-project/
 `
 ```
 
-```mermaid
-flowchart TD
-    subgraph S1["Stage 1: Cell Lines & Sample Preparation"]
-        A1["Non-Tumorigenic Control<br/>MCF10A"]
-        A2["TNBC BRCA1-Wildtype<br/>MDA-MB-231"]
-        A3["TNBC BRCA1-Mutant<br/>HCC1937"]
+```flowchart TD
+    %% Global Styling
+    classDef dataInput fill:#EBF3FA,stroke:#3B7EA1,stroke-width:2px,color:#1C3D5A;
+    classDef coreScoring fill:#FFF4E6,stroke:#E67E22,stroke-width:2px,color:#7E3D00;
+    classDef comboEngine fill:#EAF2E8,stroke:#2E7D32,stroke-width:2px,color:#1B4332;
+    classDef hcosEngine fill:#F3E5F5,stroke:#7B1FA2,stroke-width:2px,color:#4A148C;
+    classDef validation fill:#FFEBEE,stroke:#C62828,stroke-width:2px,color:#880E4F;
+    classDef finalOutput fill:#ECEFF1,stroke:#455A64,stroke-width:2px,color:#263238;
+
+    %% STAGE 1: DATA INTEGRATION & COHORT SCREENING
+    subgraph S1 ["1. Data Integration & Cohort Screening"]
+        direction TB
+        D1["TCGA-BRCA Data<br/><i>(RNA-seq, Clinical, Somatic Mutations)</i>"] ::: dataInput
+        D2["DepMap Portal<br/><i>(CRISPR Essentiality, 25 TNBC Lines)</i>"] ::: dataInput
+        D3["STRING REST API<br/><i>(PPI Network, Centrality, Communities)</i>"] ::: dataInput
+        D4["DGIdb GraphQL API<br/><i>(4,655 Interaction Records)</i>"] ::: dataInput
+        D5["openFDA FAERS API<br/><i>(Adverse Event Reaction Profiles)</i>"] ::: dataInput
+
+        CohortFunnel["<b>Cohort Screening Funnel</b><br/>• Total TCGA-BRCA Subtyped: n = 1,087<br/>• PAM50 Basal-like: n = 192<br/>• Mutation Eligible: n = 168<br/>• Candidate Drug-Mapped (≥2 Genes): n = 18"] ::: dataInput
+
+        D1 --> CohortFunnel
     end
 
-    subgraph S2["Stage 2: Multi-Omic Profiling & Preprocessing"]
-        direction LR
-        B1["DNA Methylation<br/>Illumina EPIC Array<br/>minfi & wateRmelon<br/>Promoter filtering"]
-        B2["RNA-Sequencing<br/>TruSeq Stranded mRNA<br/>STAR & featureCounts<br/>TMM normalization"]
-        B3["Proteomics & PTMs<br/>Orbitrap MS3 quant<br/>TMT 10-plex, Loess<br/>Global, phospho & histone PTMs"]
+    %% STAGE 2: COMPOSITE TARGET SCORE (CTS) FRAMEWORK
+    subgraph S2 ["2. Composite Target Score (CTS) Engine"]
+        direction TB
+        Panel["90-Gene RTK/NRTK Panel<br/><i>(56 RTKs + 34 NRTKs)</i>"] ::: coreScoring
+
+        CTS_Calc["<b>Composite Target Score (CTS) Calculation</b><br/>CTS(k) = 0.30·Centrality + 0.25·Essentiality +<br/>0.25·Survival + 0.20·Druggability"] ::: coreScoring
+
+        TopKinases["<b>Cohort Kinase Prioritization</b><br/>1. ERBB2 (0.690)<br/>2. EGFR (0.613)<br/>3. PTK2 / FAK (0.532)"] ::: coreScoring
+
+        Panel --> CTS_Calc
+        D2 --> CTS_Calc
+        D3 --> CTS_Calc
+        D4 --> CTS_Calc
+        D1 --> CTS_Calc
+        CTS_Calc --> TopKinases
     end
 
-    subgraph S3["Stage 3: Annotation Mapping & Cross-Omics Alignment"]
-        C1["Identifier harmonization via<br/>GENCODE v12, SwissProt, UniProt,<br/>Illumina EPIC manifest"]
-        C2["CpG promoters & gene expression<br/>mapped by Ensembl IDs"]
-        C3["Proteins & phosphopeptides<br/>mapped by UniProtKB IDs"]
+    %% STAGE 3: HIERARCHICAL COMBINATION GENERATION
+    subgraph S3 ["3. Higher-Order Combination Framework"]
+        direction TB
+        PairCTS["<b>PairCTS (Two-Drug Scoring)</b><br/>• Target CTS (0.35 + 0.35)<br/>• Louvain Community Complementarity (0.20)<br/>• Edge Crosstalk (0.10)<br/><i>Adjusted for FAERS Toxicity & Redundancy</i>"] ::: comboEngine
+
+        TripletCTS["<b>TripletCTS (Three-Drug Scoring)</b><br/>• Module Coverage (0.30)<br/>• Escape-Route Closure (0.30)<br/>• Non-Redundancy (0.25)<br/>• Combined Toxicity (-0.15)"] ::: comboEngine
+
+        TopKinases --> PairCTS
+        PairCTS --> TripletCTS
     end
 
-    subgraph S4["Stage 4: Integrated Computational Analysis"]
-        direction LR
-        D1["Pairwise Correlations<br/>Pearson correlation of key features<br/>Directionality check (methylation vs mRNA)"]
-        D2["Supervised Factorization<br/>MixOmics DIABLO (sPLS regression)<br/>Discriminative multi-omic signature extraction"]
-        D3["Pathway Integration<br/>MOGSA framework<br/>Integrated Gene-Set Score (GSS)"]
+    %% STAGE 4: PATIENT-SPECIFIC REGIMEN PRIORITIZATION (HCOS/MDCOE)
+    subgraph S4 ["4. Patient-Specific Prioritization"]
+        direction TB
+        FocalPatient["<b>Focal Patient Selection</b><br/><i>TCGA-AO-A128 (PAM50 Basal-Like)</i><br/>Altered: EGFR, PTEN, FLT1, TP53, ERBB2, TYK2"] ::: hcosEngine
+
+        HCOS_Engine["<b>MDCOE / HCOS Beam Search</b><br/>HCOS = Synergy + Evidence + SizeBonus<br/>− 0.2·ToxicityOverlap − 0.3·DiversityPenalty"] ::: hcosEngine
+
+        FocalOutput["<b>Top Patient Regimens (HCOS = 0.450, Tied)</b><br/>1. Afatinib + Alpelisib + Trastuzumab<br/>2. Afatinib + Capivasertib + Trastuzumab"] ::: hcosEngine
+
+        CohortFunnel -.-> FocalPatient
+        FocalPatient --> HCOS_Engine
+        D5 --> HCOS_Engine
+        HCOS_Engine --> FocalOutput
     end
 
-    subgraph S5["Stage 5: Functional Discovery & Biomarkers"]
-        direction LR
-        E1["Direct Regulatory Axes<br/>PTEN, SMAD5, TGFBR1"]
-        E2["Discriminative Markers<br/>Component 1 & 2 latent variables"]
-        E3["Enriched Hallmark Pathways<br/>Notch · PI3K/AKT/mTOR · TGF-β"]
+    %% STAGE 5: INDEPENDENT VALIDATION & SENSITIVITY ANALYSES
+    subgraph S5 ["5. Independent Validation & Sensitivity"]
+        direction TB
+        DepMapVal["<b>DepMap Essentiality Assessment</b><br/>Gene-Identity (R² = 0.337) vs.<br/>Per-Sample Model (R² = -0.029)"] ::: validation
+
+        CPTACVal["<b>CPTAC Proteomic Validation</b><br/>• 107/276 Significant Correlations<br/>• 44/107 Matched STRING Edges<br/>• Identifies ERBB3↔ABL1 Crosstalk"] ::: validation
+
+        FunMapVal["<b>FunMap vs. STRING Evaluation</b><br/>• 13% Edge Overlap (394/3,151)<br/>• Median Rank Shift: 117 Positions<br/>• Elevates YES1, SYK, and PKC Axis"] ::: validation
+
+        ReproTest["<b>Reproducibility Audit</b><br/>Bit-identical HCOS = 0.450 across<br/>4 independent code paths"] ::: validation
     end
 
-    A1 --> B1
-    A1 --> B2
-    A1 --> B3
-    A2 --> B1
-    A2 --> B2
-    A2 --> B3
-    A3 --> B1
-    A3 --> B2
-    A3 --> B3
-
-    B1 --> C1
-    B2 --> C1
-    B3 --> C1
-    C1 --> C2
-    C1 --> C3
-
-    C2 --> D1
-    C2 --> D2
-    C3 --> D2
-    C3 --> D3
-    C2 --> D3
-
-    D1 --> E1
-    D2 --> E2
-    D3 --> E3
+    %% CONNECTORS TO VALIDATION
+    CTS_Calc -.-> DepMapVal
+    D3 -.-> CPTACVal
+    PairCTS -.-> FunMapVal
+    FocalOutput -.-> ReproTest
 ```
 
 ## Getting started
