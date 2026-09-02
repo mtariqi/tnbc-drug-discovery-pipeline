@@ -99,7 +99,48 @@ tnbc-project/
 ├── docs/                # methodology, data provenance, limitations
 └── scripts/             # CLI entry points wiring loaders through to src/ modules
 ```
+```
+graph TD
+    %% Custom Styling for Publication Quality
+    classDef samplePrep fill:#EBF3FA,stroke:#2C5E8A,stroke-width:2px,color:#1C2D42,font-weight:bold;
+    classDef singleOmics fill:#F4F6F9,stroke:#4A607A,stroke-width:1.5px,color:#1C2D42;
+    classDef normAnnot fill:#FEF9E7,stroke:#D4AC0D,stroke-width:1.5px,color:#1C2D42;
+    classDef integration fill:#EAECEE,stroke:#2E4053,stroke-width:2px,color:#1C2D42,font-weight:bold;
+    classDef outputs fill:#E8F8F5,stroke:#117A65,stroke-width:2px,color:#1C2D42,font-weight:bold;
 
+    %% STAGE 1: Experimental Setup & Cell Models
+    subgraph S1 ["STAGE 1: Cell Lines & Sample Preparation"]
+        A["Triple-Negative Breast Cancer (TNBC) Model Cohort<br/>• Non-Tumorigenic Control: <b>MCF10A</b><br/>• TNBC BRCA1-Wildtype: <b>MDA-MB-231</b><br/>• TNBC BRCA1-Mutant: <b>HCC1937</b>"] :::samplePrep
+    end
+
+    %% STAGE 2: Multi-Layer Profiling & QC
+    subgraph S2 ["STAGE 2: Multi-Omic Profiling & Preprocessing"]
+        A --> B1["<b>DNA Methylation</b><br/>• Illumina EPIC BeadChip<br/>• minfi & wateRmelon (BMIQ)<br/>• Promoter region filtering"] :::singleOmics
+        A --> B2["<b>RNA-Sequencing</b><br/>• TruSeq Stranded mRNA / NextSeq<br/>• STAR alignment & featureCounts<br/>• Trimmed Mean of M-values (TMM)"] :::singleOmics
+        A --> B3["<b>Proteomics & PTMs</b><br/>• Orbitrap MS3 Quantification<br/>• TMT 10-plex Cyclic Loess<br/>• Total Protein, Phosphopeptides, Histones"] :::singleOmics
+    end
+
+    %% STAGE 3: Harmonization
+    subgraph S3 ["STAGE 3: Annotation Mapping & Cross-Omics Alignment"]
+        B1 --> C["Transcript & Gene Identifier Mapping<br/><i>GENCODE v12 / SwissProt / UniProt / Illumina EPIC Manifest</i>"] :::normAnnot
+        B2 --> C
+        B3 --> C
+    end
+
+    %% STAGE 4: Data Integration Frameworks
+    subgraph S4 ["STAGE 4: Integrated Computational Analysis"]
+        C --> D1["<b>Pairwise Correlation Analysis</b><br/>• Pearson correlation of significant features<br/>• Directionality mapping (e.g., Promoter Methylation vs. mRNA)"] :::integration
+        C --> D2["<b>Supervised Matrix Factorization</b><br/>• MixOmics - DIABLO (sPLS)<br/>• Multi-omic discriminant signature identification"] :::integration
+        C --> D3["<b>Single-Sample Pathway Integration</b><br/>• MOGSA (Multi-Omics Gene-Set Analysis)<br/>• Integrated Gene-Set Score (GSS) calculation"] :::integration
+    end
+
+    %% STAGE 5: Biological Insights
+    subgraph S5 ["STAGE 5: Functional Discovery & Biomarker Identification"]
+        D1 --> E1["Identify concordant regulatory axes<br/><i>(e.g., PTEN, SMAD5, TGFBR1)</i>"] :::outputs
+        D2 --> E2["Extract discriminative multi-omic features<br/><i>(Component 1/2 latent variables)</i>"] :::outputs
+        D3 --> E3["Map enriched oncogenic hallmark pathways<br/><i>(Notch, PI3K/AKT/mTOR, TGF-β)</i>"] :::outputs
+    end
+```
 ## Getting started
 
 **Using fish shell?** See `docs/FISH_SHELL_GUIDE.md` first — virtual environment
