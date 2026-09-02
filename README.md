@@ -99,66 +99,70 @@ tnbc-project/
 ├── docs/                # methodology, data provenance, limitations
 └── scripts/             # CLI entry points wiring loaders through to src/ modules
 `
-``
 ```
-========================================================================================
-STAGE 1: CELL LINES & SAMPLE PREPARATION
-========================================================================================
-  [ TNBC Model Cohort ]
-  • Non-Tumorigenic Control: MCF10A
-  • TNBC BRCA1-Wildtype: MDA-MB-231
-  • TNBC BRCA1-Mutant: HCC1937
-                            │
-                            ▼
-========================================================================================
-STAGE 2: MULTI-OMIC PROFILING & PREPROCESSING
-========================================================================================
-  ┌─────────────────────────┬─────────────────────────┬────────────────────────┐
-  │     DNA Methylation     │     RNA-Sequencing      │    Proteomics & PTMs   │
-  ├─────────────────────────┼─────────────────────────┼────────────────────────┤
-  │ • Illumina EPIC Array   │ • TruSeq Stranded mRNA  │ • Orbitrap MS3 Quant   │
-  │ • minfi & wateRmelon    │ • STAR & featureCounts  │ • TMT 10-plex Loess    │
-  │ • Promoter filtering    │ • TMM Normalization     │ • Global, Phospho,     │
-  │                         │                         │   & Histone PTMs       │
-  └────────────┬────────────┴────────────┬────────────┴────────────┬───────────┘
-               │                         │                         │
-               └─────────────────────────┼─────────────────────────┘
-                                         ▼
-========================================================================================
-STAGE 3: ANNOTATION MAPPING & CROSS-OMICS ALIGNMENT
-========================================================================================
-  [ Transcript & Gene Identifier Harmonization ]
-  • Cross-referenced via GENCODE v12, SwissProt, UniProt, & Illumina EPIC Manifest
-  • CpG Promoters & Gene Expression mapped by Ensembl IDs
-  • Proteins & Phosphorylated Peptides mapped by UniProtKB IDs
-                            │
-                            ▼
-========================================================================================
-STAGE 4: INTEGRATED COMPUTATIONAL ANALYSIS
-========================================================================================
-  ┌─────────────────────────┬─────────────────────────┬────────────────────────┐
-  │  Pairwise Correlations  │ Supervised Factorization│   Pathway Integration  │
-  ├─────────────────────────┼─────────────────────────┼────────────────────────┤
-  │ • Pearson correlation   │ • MixOmics - DIABLO     │ • MOGSA Framework      │
-  │   of key features       │   (sPLS regression)     │ • Integrated Gene-Set  │
-  │ • Directionality check  │ • Discriminative multi- │   Score (GSS)          │
-  │   (Methylation vs mRNA) │   omic signature extraction │ calculation          │
-  └────────────┬────────────┴────────────┬────────────┴────────────┬───────────┘
-               │                         │                         │
-               ▼                         ▼                         ▼
-========================================================================================
-STAGE 5: FUNCTIONAL DISCOVERY & BIOMARKERS
-========================================================================================
-  ┌─────────────────────────┬─────────────────────────┬────────────────────────┐
-  │ Direct Regulatory Axes  │ Discriminative Markers  │ Enriched Hallmark Pathways│
-  ├─────────────────────────┼─────────────────────────┼────────────────────────┤
-  │ • Identified concordant │ • Extracted Component 1 │ • Mapped key pathways: │
-  │   targets (e.g., PTEN,  │   and Component 2       │   - Notch              │
-  │   SMAD5, TGFBR1)        │   latent variables      │   - PI3K / AKT / mTOR  │
-  │                         │                         │   - TGF-beta           │
-  └─────────────────────────┴─────────────────────────┴────────────────────────┘
+
+```mermaid
+flowchart TD
+    subgraph S1["Stage 1: Cell Lines & Sample Preparation"]
+        A1["Non-Tumorigenic Control<br/>MCF10A"]
+        A2["TNBC BRCA1-Wildtype<br/>MDA-MB-231"]
+        A3["TNBC BRCA1-Mutant<br/>HCC1937"]
+    end
+
+    subgraph S2["Stage 2: Multi-Omic Profiling & Preprocessing"]
+        direction LR
+        B1["DNA Methylation<br/>Illumina EPIC Array<br/>minfi & wateRmelon<br/>Promoter filtering"]
+        B2["RNA-Sequencing<br/>TruSeq Stranded mRNA<br/>STAR & featureCounts<br/>TMM normalization"]
+        B3["Proteomics & PTMs<br/>Orbitrap MS3 quant<br/>TMT 10-plex, Loess<br/>Global, phospho & histone PTMs"]
+    end
+
+    subgraph S3["Stage 3: Annotation Mapping & Cross-Omics Alignment"]
+        C1["Identifier harmonization via<br/>GENCODE v12, SwissProt, UniProt,<br/>Illumina EPIC manifest"]
+        C2["CpG promoters & gene expression<br/>mapped by Ensembl IDs"]
+        C3["Proteins & phosphopeptides<br/>mapped by UniProtKB IDs"]
+    end
+
+    subgraph S4["Stage 4: Integrated Computational Analysis"]
+        direction LR
+        D1["Pairwise Correlations<br/>Pearson correlation of key features<br/>Directionality check (methylation vs mRNA)"]
+        D2["Supervised Factorization<br/>MixOmics DIABLO (sPLS regression)<br/>Discriminative multi-omic signature extraction"]
+        D3["Pathway Integration<br/>MOGSA framework<br/>Integrated Gene-Set Score (GSS)"]
+    end
+
+    subgraph S5["Stage 5: Functional Discovery & Biomarkers"]
+        direction LR
+        E1["Direct Regulatory Axes<br/>PTEN, SMAD5, TGFBR1"]
+        E2["Discriminative Markers<br/>Component 1 & 2 latent variables"]
+        E3["Enriched Hallmark Pathways<br/>Notch · PI3K/AKT/mTOR · TGF-β"]
+    end
+
+    A1 --> B1
+    A1 --> B2
+    A1 --> B3
+    A2 --> B1
+    A2 --> B2
+    A2 --> B3
+    A3 --> B1
+    A3 --> B2
+    A3 --> B3
+
+    B1 --> C1
+    B2 --> C1
+    B3 --> C1
+    C1 --> C2
+    C1 --> C3
+
+    C2 --> D1
+    C2 --> D2
+    C3 --> D2
+    C3 --> D3
+    C2 --> D3
+
+    D1 --> E1
+    D2 --> E2
+    D3 --> E3
 ```
-```
+
 ## Getting started
 
 **Using fish shell?** See `docs/FISH_SHELL_GUIDE.md` first — virtual environment
