@@ -329,15 +329,35 @@ def drug_pair_score(
     community_map: Dict[str, int],
     crosstalk_edges: Dict[Tuple[str, str], float],
     toxicity_lookup: Dict[Tuple[str, str], float],
-    synergy_lookup: Dict[Tuple[str, str], float],
     weights: Dict[str, float] = None,
+    synergy_lookup: Optional[Dict[Tuple[str, str], float]] = None,
 ) -> float:
-    """DrugPairScore(di,dj) = PairCTS(best targets) - lambda*Toxicity + mu*Synergy"""
+    """
+    Primary formulation (as reported in the manuscript):
+        DrugPairScore(di,dj) = PairCTS(best targets) - lambda*Toxicity
+
+    No synergy term is included by default. An earlier version of this
+    function always added a mu*Synergy term, but with no real pairwise
+    synergy dataset integrated, that term was always exactly 0 for every
+    real result ever reported -- a component contributing no empirical
+    signal was retained anyway, until removed here to match the primary
+    formulation actually described in the manuscript.
+
+    Real experimental synergy data (e.g. from the wet-lab pilot in
+    Section 5.4), once available, can be incorporated WITHOUT reverting
+    this change: pass a real, non-empty synergy_lookup explicitly and it
+    will be added as an additive extension to the primary score below --
+    this is the "future extensible evidence layer" described in the
+    manuscript, not a reintroduction of the removed placeholder term.
+    """
     w = weights or DRUG_PAIR_WEIGHTS
     base = best_target_pair_cts(drug_i, drug_j, target_map, cts, community_map, crosstalk_edges)
     tox = toxicity_lookup.get((drug_i, drug_j), toxicity_lookup.get((drug_j, drug_i), 0.0))
-    syn = synergy_lookup.get((drug_i, drug_j), synergy_lookup.get((drug_j, drug_i), 0.0))
-    return base - w["lambda_toxicity"] * tox + w["mu_synergy"] * syn
+    score = base - w["lambda_toxicity"] * tox
+    if synergy_lookup:
+        syn = synergy_lookup.get((drug_i, drug_j), synergy_lookup.get((drug_j, drug_i), 0.0))
+        score += w["mu_synergy"] * syn
+    return score
 
 
 # =====================================================================
@@ -415,13 +435,17 @@ def rank_all_pairs(
     community_map: Dict[str, int],
     crosstalk_edges: Dict[Tuple[str, str], float],
     toxicity_lookup: Dict[Tuple[str, str], float],
-    synergy_lookup: Dict[Tuple[str, str], float],
+    synergy_lookup: Optional[Dict[Tuple[str, str], float]] = None,
 ) -> pd.DataFrame:
-    """Score every unique drug pair and return sorted by DrugPairScore descending."""
+    """Score every unique drug pair and return sorted by DrugPairScore descending.
+    synergy_lookup is optional: omit it (or pass None/{}) to use the primary
+    formulation reported in the manuscript (no synergy term); pass a real,
+    non-empty lookup to extend it with real experimental synergy data."""
     rows = []
     for d1, d2 in itertools.combinations(sorted(set(drugs)), 2):
         score = drug_pair_score(
-            d1, d2, target_map, cts, community_map, crosstalk_edges, toxicity_lookup, synergy_lookup
+            d1, d2, target_map, cts, community_map, crosstalk_edges, toxicity_lookup,
+            synergy_lookup=synergy_lookup,
         )
         rows.append({"drug_1": d1, "drug_2": d2, "DrugPairScore": score})
     return pd.DataFrame(rows).sort_values("DrugPairScore", ascending=False).reset_index(drop=True)
@@ -498,7 +522,15 @@ def demo_with_synthetic_data() -> None:
     toxicity_lookup = {("afatinib", "trastuzumab"): 0.4, ("dasatinib", "ruxolitinib"): 0.2}
     synergy_lookup = {("afatinib", "alpelisib"): 0.5, ("afatinib", "trastuzumab"): 0.3}
 
-    print("=== Ranked drug pairs (synthetic demo) ===")
+    print("=== Ranked drug pairs, primary formulation (no synergy term) ===")
+    primary_pairs_df = rank_all_pairs(
+        target_map.keys(), target_map, cts_df["CTS"], community_map,
+        crosstalk_edges, toxicity_lookup,
+    )
+    print(primary_pairs_df.head(10), "\n")
+
+    print("=== Ranked drug pairs, WITH optional synergy extension (demo only --")
+    print("    synergy_lookup below is illustrative, not real experimental data) ===")
     pairs_df = rank_all_pairs(
         target_map.keys(), target_map, cts_df["CTS"], community_map,
         crosstalk_edges, toxicity_lookup, synergy_lookup,

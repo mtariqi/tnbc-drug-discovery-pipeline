@@ -1,0 +1,5 @@
+ablated_component,spearman_rho,top10_overlap,top20_overlap
+centrality,0.8144791538049964,0.8,0.75
+survival,0.8541383709923036,0.9,0.75
+essentiality,0.9261143351030993,0.7,0.75
+druggability,0.936025023665473,0.8,0.75

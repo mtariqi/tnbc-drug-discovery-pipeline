@@ -1,0 +1,60 @@
+patient,genes,n_available_drugs,top_regimen,top_hcos,n_tied_top,tied_regimens,genes_with_no_drug_entry
+TCGA-A1-A0SO,"AR,BRCA1,EPHB3,LYN,TP53",6,adavosertib + bicalutamide,0.1,6,adavosertib + bicalutamide | adavosertib + enzalutamide | bicalutamide + olaparib | bicalutamide + talazoparib | enzalutamide + olaparib | enzalutamide + talazoparib,"EPHB3,LYN"
+TCGA-A2-A04P,"BRCA2,ERBB3,PIK3CA,TP53",5,alpelisib + olaparib,0.7,1,alpelisib + olaparib,ERBB3
+TCGA-A2-A04T,"PIK3CA,TP53",3,adavosertib + alpelisib,0.1,1,adavosertib + alpelisib,
+TCGA-A2-A0T0,"ALK,BRCA2,PDGFRA,PTK2,SYK",7,alectinib + crizotinib,0.2,2,alectinib + crizotinib | crizotinib + imatinib,PTK2
+TCGA-A2-A4S1,"KDR,TP53",7,adavosertib + axitinib,0.1,4,adavosertib + axitinib | adavosertib + lenvatinib | adavosertib + pazopanib | adavosertib + sorafenib,
+TCGA-A7-A13E,"JAK1,TP53",4,baricitinib + ruxolitinib,0.05,1,baricitinib + ruxolitinib,
+TCGA-A7-A26F,"PTEN,TP53",4,adavosertib + alpelisib,0.1,2,adavosertib + alpelisib | adavosertib + capivasertib,
+TCGA-A7-A26G,"EPHB3,PTEN,TP53",4,adavosertib + alpelisib,0.1,2,adavosertib + alpelisib | adavosertib + capivasertib,EPHB3
+TCGA-A7-A4SE,"RET,TP53",4,adavosertib + selpercatinib,0.1,1,adavosertib + selpercatinib,
+TCGA-A7-A5ZV,"MTOR,TP53",4,adavosertib + everolimus,-0.1,2,adavosertib + everolimus | adavosertib + temsirolimus,
+TCGA-A7-A6VW,"BRCA1,TP53",4,adavosertib + olaparib,-0.1,2,adavosertib + olaparib | adavosertib + talazoparib,
+TCGA-A8-A07R,"AR,JAK2,TP53",5,adavosertib + bicalutamide,0.1,4,adavosertib + bicalutamide | adavosertib + enzalutamide | bicalutamide + ruxolitinib | enzalutamide + ruxolitinib,
+TCGA-A8-A07U,"DDR1,TP53",3,adavosertib + nilotinib,-0.1,1,adavosertib + nilotinib,
+TCGA-A8-A08R,"PIK3CA,TP53",3,adavosertib + alpelisib,0.1,1,adavosertib + alpelisib,
+TCGA-AC-A8OQ,"AXL,PDGFRA,TP53",4,imatinib + sunitinib,0.0,1,imatinib + sunitinib,AXL
+TCGA-AN-A0FJ,"CDK6,EPHA7,ROR1,TP53",4,adavosertib + palbociclib,-0.1,2,adavosertib + palbociclib | adavosertib + ribociclib,"ROR1,EPHA7"
+TCGA-AN-A0FL,"EPHA5,FGFR2,TP53",4,adavosertib + erdafitinib,0.1,1,adavosertib + erdafitinib,EPHA5
+TCGA-AN-A0XU,"BRCA1,TP53",4,adavosertib + olaparib,-0.1,2,adavosertib + olaparib | adavosertib + talazoparib,
+TCGA-AO-A124,"BRCA2,EPHB4,TP53",4,adavosertib + olaparib,-0.1,2,adavosertib + olaparib | adavosertib + talazoparib,EPHB4
+TCGA-AO-A128,"EGFR,EPHB3,ERBB2,FGR,FLT1,MATK,MERTK,MUSK,PTEN,TP53,TYK2",15,afatinib + alpelisib + trastuzumab,0.45,2,afatinib + alpelisib + trastuzumab | afatinib + capivasertib + trastuzumab,"FGR,MERTK,EPHB3,MUSK,MATK"
+TCGA-AO-A1KR,"BRCA1,PIK3CA",3,alpelisib + olaparib,0.7,1,alpelisib + olaparib,
+TCGA-AQ-A54N,"DDR2,TP53",3,adavosertib + dasatinib,-0.1,1,adavosertib + dasatinib,
+TCGA-AR-A0TP,"LMTK3,ROS1,TP53",4,adavosertib + crizotinib,0.1,2,adavosertib + crizotinib | adavosertib + entrectinib,LMTK3
+TCGA-AR-A1AI,"BRCA2,TP53",4,adavosertib + olaparib,-0.1,2,adavosertib + olaparib | adavosertib + talazoparib,
+TCGA-AR-A1AJ,"PTEN,TP53",4,adavosertib + alpelisib,0.1,2,adavosertib + alpelisib | adavosertib + capivasertib,
+TCGA-AR-A1AQ,"FLT1,RB1,TP53",6,adavosertib + axitinib,0.1,3,adavosertib + axitinib | adavosertib + pazopanib | adavosertib + sorafenib,RB1
+TCGA-AR-A24Q,"EPHA3,EPHB2,PTEN,TP53",4,adavosertib + alpelisib,0.1,2,adavosertib + alpelisib | adavosertib + capivasertib,"EPHB2,EPHA3"
+TCGA-AR-A251,"INSR,RET,TP53",5,adavosertib + linsitinib + selpercatinib,0.15,1,adavosertib + linsitinib + selpercatinib,
+TCGA-AR-A2LR,"EGFR,TP53",5,adavosertib + afatinib,0.1,3,adavosertib + afatinib | adavosertib + erlotinib | adavosertib + gefitinib,
+TCGA-AR-A5QQ,"PIK3CA,PTEN,TP53",4,adavosertib + alpelisib,0.1,2,adavosertib + alpelisib | adavosertib + capivasertib,
+TCGA-B6-A0X1,"BRCA1,EPHB3,TP53",4,adavosertib + olaparib,-0.1,2,adavosertib + olaparib | adavosertib + talazoparib,EPHB3
+TCGA-BH-A0B3,"ABL1,TP53",5,dasatinib + imatinib,0.05,1,dasatinib + imatinib,
+TCGA-BH-A0DL,"PIK3CA,TP53",3,adavosertib + alpelisib,0.1,1,adavosertib + alpelisib,
+TCGA-BH-A0E0,"ALK,TP53",4,alectinib + crizotinib,0.2,1,alectinib + crizotinib,
+TCGA-BH-A0WA,"BRCA1,TP53",4,adavosertib + olaparib,-0.1,2,adavosertib + olaparib | adavosertib + talazoparib,
+TCGA-BH-A18V,"FER,FLT1,LTK,TP53",6,adavosertib + axitinib,0.1,3,adavosertib + axitinib | adavosertib + pazopanib | adavosertib + sorafenib,"FER,LTK"
+TCGA-C8-A12K,"FES,FLT1,TP53",6,adavosertib + axitinib,0.1,3,adavosertib + axitinib | adavosertib + pazopanib | adavosertib + sorafenib,FES
+TCGA-C8-A131,"PIK3CA,TP53",3,adavosertib + alpelisib,0.1,1,adavosertib + alpelisib,
+TCGA-C8-A134,"BTK,TEK,TP53",5,acalabrutinib + adavosertib,-0.1,3,acalabrutinib + adavosertib | adavosertib + ibrutinib | adavosertib + zanubrutinib,TEK
+TCGA-D8-A143,"PIK3CA,RB1,TP53",3,adavosertib + alpelisib,0.1,1,adavosertib + alpelisib,RB1
+TCGA-D8-A147,"DDR2,EPHB1,LMTK2,MERTK,MYC,TP53",4,adavosertib + dasatinib,-0.1,3,adavosertib + dasatinib | adavosertib + molibresib | dasatinib + molibresib,"MERTK,EPHB1,LMTK2"
+TCGA-D8-A1JK,"MYC,PIK3CA,TP53",4,adavosertib + alpelisib,0.1,2,adavosertib + alpelisib | alpelisib + molibresib,
+TCGA-D8-A1XK,"AR,EPHB2,ERBB4,FGFR1,JAK2,MUSK,PTEN,PTK2,ROS1,TP53,TYRO3",11,crizotinib + ruxolitinib,0.25,2,crizotinib + ruxolitinib | erdafitinib + ruxolitinib,"EPHB2,ERBB4,PTK2,MUSK,TYRO3"
+TCGA-D8-A1XQ,"ABL2,EPHB1,EPHB6,NTRK3,PDGFRA,RB1,TP53",7,adavosertib + entrectinib,0.1,2,adavosertib + entrectinib | adavosertib + larotrectinib,"EPHB1,EPHB6,RB1"
+TCGA-D8-A27M,"BRCA1,TP53",4,adavosertib + olaparib,-0.1,2,adavosertib + olaparib | adavosertib + talazoparib,
+TCGA-E2-A14N,"ROS1,TP53",4,adavosertib + crizotinib,0.1,2,adavosertib + crizotinib | adavosertib + entrectinib,
+TCGA-E2-A14R,"NTRK3,TP53",4,adavosertib + entrectinib,0.1,2,adavosertib + entrectinib | adavosertib + larotrectinib,
+TCGA-E2-A14Y,"PIK3CA,TP53",3,adavosertib + alpelisib,0.1,1,adavosertib + alpelisib,
+TCGA-E2-A150,"BRAF,ERBB4,TP53",4,adavosertib + dabrafenib,0.1,2,adavosertib + dabrafenib | adavosertib + vemurafenib,ERBB4
+TCGA-E2-A1LG,"ABL2,TP53",4,adavosertib + imatinib,-0.1,2,adavosertib + imatinib | adavosertib + nilotinib,
+TCGA-E2-A1LS,"NTRK2,TP53",4,adavosertib + entrectinib,0.1,2,adavosertib + entrectinib | adavosertib + larotrectinib,
+TCGA-E2-A574,"DDR1,TP53",3,adavosertib + nilotinib,-0.1,1,adavosertib + nilotinib,
+TCGA-E9-A1NC,"BRCA1,TP53",4,adavosertib + olaparib,-0.1,2,adavosertib + olaparib | adavosertib + talazoparib,
+TCGA-EW-A1P4,"JAK3,TP53",3,adavosertib + tofacitinib,-0.1,1,adavosertib + tofacitinib,
+TCGA-LL-A5YP,"BRCA1,PTEN,TP53",6,alpelisib + olaparib,0.7,1,alpelisib + olaparib,
+TCGA-LL-A73Y,"BRCA2,MTOR,TP53",6,adavosertib + everolimus,-0.1,8,adavosertib + everolimus | adavosertib + olaparib | adavosertib + talazoparib | adavosertib + temsirolimus | everolimus + olaparib | everolimus + talazoparib | olaparib + temsirolimus | talazoparib + temsirolimus,
+TCGA-LL-A8F5,"BRCA1,TP53",4,adavosertib + olaparib,-0.1,2,adavosertib + olaparib | adavosertib + talazoparib,
+TCGA-PL-A8LV,"JAK3,TP53",3,adavosertib + tofacitinib,-0.1,1,adavosertib + tofacitinib,
+TCGA-S3-AA10,"EPHB1,RB1,ROS1,TP53",4,adavosertib + crizotinib,0.1,2,adavosertib + crizotinib | adavosertib + entrectinib,"EPHB1,RB1"
