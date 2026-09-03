@@ -1,4 +1,4 @@
-![banner](docs/banner-v2.png)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22282629.svg)](https://doi.org/10.5281/zenodo.22282629)[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22282629.svg)](https://doi.org/10.5281/zenodo.22282629)![banner](docs/banner-v2.png)
 
 # TNBC Kinase-Redundancy, Drug-Regimen, and Cohort-Scale ML Project
 
@@ -7,7 +7,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-GNN%20models-ee4c2c.svg)](https://pytorch.org/)
 [![Status](https://img.shields.io/badge/status-manuscript%20in%20submission-orange.svg)]()
 [![Robustness Validated](https://img.shields.io/badge/robustness%2Fablation%2Fnull--model-complete-brightgreen.svg)]()
-[![DOI](https://img.shields.io/badge/DOI-pending%20Zenodo%20archive-lightgrey.svg)]()
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22282629.svg)](https://doi.org/10.5281/zenodo.22282629)
 
 A real-data computational pipeline for RTK/NRTK target prioritization and drug-regimen
 discovery in triple-negative breast cancer. This repository consolidates our earlier
