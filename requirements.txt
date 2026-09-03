@@ -1,12 +1,24 @@
-pandas
-numpy
-scipy
+# Verified against the real environment used to run every script cited in the
+# manuscript (Sections 2, 4.10, 4.11): Python 3.11.14, conda env "rtk_nrtk".
+# Exact versions pinned below for reproducibility of the archived release
+# (v1.0.3, Zenodo DOI 10.5281/zenodo.22282244); relax pins with care.
+
+pandas==3.0.1
+numpy==2.4.2
+scipy==1.16.3
+
 # scikit-learn: on this machine/Python 3.13 combo, plain pip install falls back to a
 # from-source Cython build that fails. Install via conda BEFORE running
 # `pip install -r requirements.txt`, in every new environment:
 #     conda install -c conda-forge scikit-learn
-scikit-learn
-networkx      # needed by src/data_loaders/string_network_builder.py (betweenness, PageRank)
+scikit-learn==1.8.0
+networkx==3.6.1      # needed by src/data_loaders/string_network_builder.py (betweenness, PageRank)
+                      # and by src/scoring/analysis3_null_models.py's degree-preserving network randomization
+
+# matplotlib: needed by src/subtyping/build_fig2_regenerated.py (the manuscript's real
+# Figure 2 regeneration script) and by the Section 4.11 robustness/ablation/null-model
+# figures (figure_9A/9B/9C).
+matplotlib==3.10.8
 
 # Survival analysis — patient_level_survival_model.py has a numpy/scipy fallback built in,
 # but install these for the real thing (elastic net, random survival forest) once available:
