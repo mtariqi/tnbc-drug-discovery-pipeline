@@ -1,0 +1,3 @@
+analysis,spearman_rho,top10_overlap,top20_overlap,lmtk_in_baseline_top20
+CTS_LMTK_exclusion,1.0,1.0,1.0,False
+PairCTS_LMTK_exclusion,0.9999999999999998,1.0,1.0,

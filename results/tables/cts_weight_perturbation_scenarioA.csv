@@ -1,0 +1,9 @@
+perturbed_component,fraction,spearman_rho,top10_overlap,top20_overlap
+centrality,-0.25,0.9909453842038111,1.0,0.95
+centrality,0.25,0.9949952669053791,1.0,0.9
+essentiality,-0.25,0.995242210972548,1.0,0.9
+essentiality,0.25,0.9951598962834918,1.0,1.0
+survival,-0.25,0.9922130304152776,1.0,0.95
+survival,0.25,0.9929373996789727,1.0,1.0
+druggability,-0.25,0.9953409885994154,1.0,0.95
+druggability,0.25,0.9952915997859817,1.0,1.0
