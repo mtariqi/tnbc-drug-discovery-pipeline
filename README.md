@@ -1,4 +1,4 @@
-![banner](docs/banner.png)
+![banner](docs/banner-v2.png)
 
 # TNBC Kinase-Redundancy, Drug-Regimen, and Cohort-Scale ML Project
 
