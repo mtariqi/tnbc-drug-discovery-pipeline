@@ -15,6 +15,10 @@ kinase-scoring and drug-regimen work into a single codebase, extended from a sin
 focal-patient case (TCGA-AO-A128) to four cohort-scale analysis tracks, a cohort-wide
 HCOS evaluation (Track D), and a full robustness/ablation/null-model validation suite.
 
+
+<img width="756" height="378" alt="image" src="https://github.com/user-attachments/assets/88708464-c17a-4d23-8c15-2bdd78153aaa" />
+
+
 ## Project scope
 
 | Track | Question | Population | Status |
