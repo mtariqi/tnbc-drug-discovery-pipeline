@@ -1,4 +1,4 @@
-echo '# Python
+# Python
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -33,4 +33,101 @@ outputs/**/*.pth
 .idea/
 
 # Jupyter
-.ipynb_checkpoints/' > .gitignore
+.ipynb_checkpoints/
+
+# =====================================================================
+# Added: scratch documents, decks, and duplicate scripts.
+# Built from this repo's actual untracked-files history, not a generic
+# template. Explicit paths (not wildcards like "*.docx") because docs/
+# legitimately contains tracked reports (Ranking_Methodology_Report.docx,
+# Session_Troubleshooting_Report.docx, etc.) that must stay tracked.
+#
+# IMPORTANT -- deliberately NOT listed below, despite looking like scratch:
+#   src/subtyping/reconstruct_cohort_funnel.py
+#     -> cited by name in the manuscript's Availability of Data and
+#        Materials statement. Must remain tracked.
+#   src/subtyping/cohort_funnel_audit/
+#   src/subtyping/cohort_funnel_audit_hypothesisA/
+#   src/subtyping/cohort_funnel_audit_hypothesisB/
+#     -> very likely the sensitivity-analysis outputs the manuscript's
+#        Supplementary Methods states are "available through the Data
+#        and Code Availability resources." Confirm before ever ignoring.
+#   src/subtyping/build_fig2_regenerated.py
+#     -> likely the real script generating the manuscript's Figure 2.
+#
+# To intentionally commit something matched below anyway: git add -f <path>
+# =====================================================================
+
+# ---- Manuscript drafts, decks, and scratch documents at repo root ----
+/TNBC_Manuscript_Draft.docx
+/TNBC_Manuscript_Draft_v2.docx
+/TNBC_Manuscript_Draft_v3.docx
+/TNBC_Manuscript_Draft_v4.docx
+/TNBC_Manuscript_Draft_v5.docx
+/TNBC_Manuscript_Draft_v6.docx
+/TNBC_Manuscript_PLOS_Format_FINAL.docx
+/TNBC_Manuscript_PLOS_Format_final.docx
+/TNBC_Manuscript_Peer_Review_Revision.docx
+/TNBC_Professor_Deck_Aug7.pptx
+/TNBC_Final_Presentation.pptx
+/TNBC_Final_Presentation..pptx
+/TNBC_Findings_Deck.pptx
+/TNBC_Lay_Audience_Deck.pptx
+/Paper 1-4.docx
+/Paper1_Method_Figure_Legends.docx
+/BioRender_Style_Paper1_Framework 1.pptx
+/Document 9.docx.pdf
+/NGS_biology-12-00997-v3.pdf
+/Rationality_Report_Paper1.pdf
+/Reviewer_Q_A.odt
+/fmolb-10-1215204.pdf
+/Next-Generation Sequencing Technology_ Current Trends and Advancements.html
+/RElated_Articles/
+/plos_latex_submission_FINAL.zip
+/plos_latex_submission_FINAL/
+/sep2_files.zip
+/draft_message_dr_sayem_followup.md
+
+# ---- Nested scratch documents under docs/ (distinct from the real,
+#      tracked reports already committed there) ----
+docs/TNBC_Manuscript_PLOS_Format.docx
+docs/plos_latex_submission.zip
+
+# ---- Loose images superseded by their real docs/ counterparts ----
+/banner.png
+/graphical_abstract.svg
+/fig2_regenerated.png
+
+# ---- Loose script duplicates at repo root (canonical copies now live
+#      under src/scoring/ and src/regimen/) ----
+/analysis1_weight_perturbation.py
+/analysis2_ablation.py
+/compare_funmap_vs_string_models.py
+/extract_panel_mutations.py
+/funmap_dual_network_scoring.py
+/run_cohort_hcos.py
+/cts_kinase_top20_stability.csv
+/paircts_pair_top20_stability.csv
+/cohort_hcos_results.csv
+
+# ---- CPTAC validation: one-off debugging scripts and regenerable
+#      intermediate/preprocessing output (not final reported results;
+#      distinct from the cptac-proteomics-validation/data/*.csv rule
+#      above, which covers raw data specifically) ----
+cptac-proteomics-validation/check_erbb3_abl1.py
+cptac-proteomics-validation/cptac_rtk_nrtk_analysis.py
+cptac-proteomics-validation/fix_cptac_fdr_correction.py
+cptac-proteomics-validation/fix_cptac_gene_panel.py
+cptac-proteomics-validation/recompute_string_overlap.py
+cptac-proteomics-validation/preprocessing_results/
+cptac-proteomics-validation/results/correlation/
+cptac-proteomics-validation/results/dashboard/
+cptac-proteomics-validation/results/eda/
+cptac-proteomics-validation/results/network/
+cptac-proteomics-validation/results/preprocessing/
+
+# ---- Other regenerable output ----
+/mc_dropout_results/
+
+# ---- Known stray artifacts (e.g. accidental tool output) ----
+src/scoring/pd
