@@ -1,0 +1,309 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 875" font-family="Arial, Helvetica, sans-serif" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo2YWZjNGQxZC0yZDcwLTQ0ZDAtYmNmYS04NmY4NjMyZTQ0NGQAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaMCzjWOXWI45B4MmL5njY3UAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo4MzIzZWRjMC0zMDYzLTQxZmYtODVlOS0yMDhhYTI0ZDdlZWJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoUDitD4nvTyq45ZVSddeNogAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggriOh5rG96dUcvlP/wVJAzS/MO8G+AeTVXxjZc5FuDT+kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaKuqWiXOaOhmHFLGrdpKDwAAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDBCjmh/0v4LE98m0QgBkPFw4n8nR6BGRs03Mp6gxsI6mRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBipZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjZhZmM0ZDFkLTJkNzAtNDRkMC1iY2ZhLTg2Zjg2MzJlNDQ0ZC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmE3YTc4MTlkLTMzODMtNDliYS04OTA4LTYzNzZlYzIzOGQ0OXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCuI6Hmsb3p1Ry+U//BUkDNL8w7wb4B5NVfGNlzkW4NP6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg89jwEsjiLJzg24aSh5LqABg81w03NDqbybUsggHMPViiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggwXjHT4Ou6QzdIA/Uq6MwZq/tMYtdcb8lN+vkyUayiah0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQEZf4fcsSs40+u18bwUJAl394BxBaNOiucIjv/u9eTvlj0XRiQUyBXDnXlDHyyv4BiE1U3gYqOQUTJixkGFgDO4=</c2pa:manifest></metadata>
+
+  <!-- ============ BACKGROUND ============ -->
+  <rect x="0" y="0" width="1700" height="875" fill="#FBFCFD"/>
+
+  <!-- ============ TITLE ============ -->
+  <text x="850" y="52" text-anchor="middle" font-size="30" font-weight="700" fill="#1C2A33">
+    Network-Informed Multi-Omic Prioritization of Combination Therapies in TNBC
+  </text>
+  <text x="850" y="82" text-anchor="middle" font-size="16" fill="#5B6B73">
+    Real TCGA / DepMap / STRING / FunMap / DGIdb data &#8226; cohort-scale target and regimen prioritization &#8226; independently reproduced and stress-tested
+  </text>
+  <line x1="450" y1="100" x2="1250" y2="100" stroke="#D8DEE2" stroke-width="1.5"/>
+
+  <!-- ============ COLUMN BACKGROUNDS ============ -->
+  <!-- Col 1: Data -->
+  <rect x="50" y="130" width="370" height="700" rx="14" fill="#EEF4F8" stroke="#C7DCE8" stroke-width="1.5"/>
+  <!-- Col 2: CTS -->
+  <rect x="460" y="130" width="370" height="700" rx="14" fill="#FDF3E7" stroke="#F0D6AE" stroke-width="1.5"/>
+  <!-- Col 3: Combination + HCOS -->
+  <rect x="870" y="130" width="370" height="700" rx="14" fill="#EEF6EF" stroke="#C3E0C6" stroke-width="1.5"/>
+  <!-- Col 4: Validation -->
+  <rect x="1280" y="130" width="370" height="700" rx="14" fill="#E9F6F7" stroke="#B7E0E2" stroke-width="1.5"/>
+
+  <!-- ============ ARROWS BETWEEN COLUMNS ============ -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#8A98A0"/>
+    </marker>
+  </defs>
+  <line x1="424" y1="480" x2="456" y2="480" stroke="#8A98A0" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="834" y1="480" x2="866" y2="480" stroke="#8A98A0" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1244" y1="480" x2="1276" y2="480" stroke="#8A98A0" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- ======================================================= -->
+  <!-- COLUMN 1: MULTI-OMIC DATA INTEGRATION -->
+  <!-- ======================================================= -->
+  <text x="235" y="168" text-anchor="middle" font-size="19" font-weight="700" fill="#1B4F72">Multi-Omic Data</text>
+
+  <!-- DNA helix icon -->
+  <g transform="translate(120,195)">
+    <path d="M0,0 C 15,20 -15,40 0,60 C 15,80 -15,100 0,120" fill="none" stroke="#1B4F72" stroke-width="3.5"/>
+    <path d="M30,0 C 15,20 45,40 30,60 C 15,80 45,100 30,120" fill="none" stroke="#5499C7" stroke-width="3.5"/>
+    <line x1="3" y1="10" x2="27" y2="10" stroke="#AAB7B8" stroke-width="2.5"/>
+    <line x1="-6" y1="30" x2="36" y2="30" stroke="#AAB7B8" stroke-width="2.5"/>
+    <line x1="3" y1="50" x2="27" y2="50" stroke="#AAB7B8" stroke-width="2.5"/>
+    <line x1="-6" y1="70" x2="36" y2="70" stroke="#AAB7B8" stroke-width="2.5"/>
+    <line x1="3" y1="90" x2="27" y2="90" stroke="#AAB7B8" stroke-width="2.5"/>
+    <line x1="-6" y1="110" x2="36" y2="110" stroke="#AAB7B8" stroke-width="2.5"/>
+  </g>
+  <text x="150" y="200" font-size="13.5" fill="#2C3E50">TCGA-BRCA</text>
+  <text x="150" y="218" font-size="11.5" fill="#7A8A92">1,087 participants &#8226; mutations, PAM50</text>
+
+  <!-- Flask icon (DepMap) -->
+  <g transform="translate(105,250)">
+    <path d="M12,0 L12,20 L0,50 A6,6 0 0 0 6,58 L26,58 A6,6 0 0 0 32,50 L20,20 L20,0 Z"
+          fill="#D6EAF8" stroke="#1B4F72" stroke-width="2.5"/>
+    <path d="M4,44 L28,44 L26,50 A6,6 0 0 1 6,50 Z" fill="#1B4F72"/>
+    <line x1="8" y1="0" x2="24" y2="0" stroke="#1B4F72" stroke-width="3"/>
+  </g>
+  <text x="150" y="270" font-size="13.5" fill="#2C3E50">DepMap CRISPR</text>
+  <text x="150" y="288" font-size="11.5" fill="#7A8A92">25 confirmed-TNBC cell lines</text>
+
+  <!-- Network icon (STRING/FunMap) -->
+  <g transform="translate(100,320)">
+    <circle cx="0" cy="10" r="6" fill="#1B4F72"/>
+    <circle cx="34" cy="0" r="6" fill="#5499C7"/>
+    <circle cx="34" cy="30" r="6" fill="#5499C7"/>
+    <circle cx="12" cy="38" r="6" fill="#1B4F72"/>
+    <line x1="0" y1="10" x2="34" y2="0" stroke="#AAB7B8" stroke-width="2"/>
+    <line x1="0" y1="10" x2="34" y2="30" stroke="#AAB7B8" stroke-width="2"/>
+    <line x1="0" y1="10" x2="12" y2="38" stroke="#AAB7B8" stroke-width="2"/>
+    <line x1="34" y1="0" x2="34" y2="30" stroke="#AAB7B8" stroke-width="2"/>
+  </g>
+  <text x="150" y="335" font-size="13.5" fill="#2C3E50">STRING &#43; FunMap</text>
+  <text x="150" y="353" font-size="11.5" fill="#7A8A92">464 &#43; 3,081 kinase-panel edges</text>
+
+  <!-- Pill icon (DGIdb) -->
+  <g transform="translate(112,385)">
+    <rect x="0" y="8" width="36" height="16" rx="8" fill="#5499C7" stroke="#1B4F72" stroke-width="2"/>
+    <line x1="18" y1="8" x2="18" y2="24" stroke="#1B4F72" stroke-width="2"/>
+  </g>
+  <text x="150" y="400" font-size="13.5" fill="#2C3E50">DGIdb</text>
+  <text x="150" y="418" font-size="11.5" fill="#7A8A92">4,655 real drug&#8211;target records</text>
+
+  <!-- Toxicity icon (FAERS) -->
+  <g transform="translate(108,448)">
+    <path d="M14,0 L28,26 L0,26 Z" fill="#F7DC6F" stroke="#1B4F72" stroke-width="2" stroke-linejoin="round"/>
+    <text x="14" y="21" text-anchor="middle" font-size="15" font-weight="700" fill="#1B4F72">!</text>
+  </g>
+  <text x="150" y="465" font-size="13.5" fill="#2C3E50">openFDA FAERS</text>
+  <text x="150" y="483" font-size="11.5" fill="#7A8A92">real adverse-event profiles</text>
+
+  <line x1="80" y1="510" x2="390" y2="510" stroke="#C7DCE8" stroke-width="1.5"/>
+  <text x="235" y="545" text-anchor="middle" font-size="13" fill="#3B5D75" font-style="italic">102-gene RTK/NRTK panel</text>
+  <text x="235" y="565" text-anchor="middle" font-size="13" fill="#3B5D75" font-style="italic">(LMTK2/LMTK3 exclusion</text>
+  <text x="235" y="585" text-anchor="middle" font-size="13" fill="#3B5D75" font-style="italic">formally confirmed inert)</text>
+
+  <!-- ======================================================= -->
+  <!-- COLUMN 2: COMPOSITE TARGET SCORE -->
+  <!-- ======================================================= -->
+  <text x="645" y="168" text-anchor="middle" font-size="19" font-weight="700" fill="#B9770E">Composite Target Score</text>
+
+  <!-- Bar chart icon -->
+  <g transform="translate(560,200)">
+    <rect x="0" y="40" width="22" height="50" fill="#E67E22"/>
+    <rect x="32" y="20" width="22" height="70" fill="#F0B27A"/>
+    <rect x="64" y="55" width="22" height="35" fill="#F0B27A"/>
+    <rect x="96" y="65" width="22" height="25" fill="#F5CBA7"/>
+    <line x1="-6" y1="90" x2="124" y2="90" stroke="#935116" stroke-width="2"/>
+  </g>
+  <text x="645" y="315" text-anchor="middle" font-size="13" fill="#7A6A55">CTS = 0.30&#183;Centrality &#43; 0.25&#183;Essentiality</text>
+  <text x="645" y="333" text-anchor="middle" font-size="13" fill="#7A6A55">&#43; 0.25&#183;Survival &#43; 0.20&#183;Druggability</text>
+
+  <line x1="500" y1="360" x2="790" y2="360" stroke="#F0D6AE" stroke-width="1.5"/>
+
+  <text x="645" y="395" text-anchor="middle" font-size="15" font-weight="700" fill="#935116">Top-ranked kinases</text>
+  <text x="530" y="428" font-size="15" fill="#2C3E50">1.  ERBB2</text>
+  <text x="790" y="428" text-anchor="end" font-size="15" font-weight="700" fill="#B9770E">0.690</text>
+  <text x="530" y="456" font-size="15" fill="#2C3E50">2.  EGFR</text>
+  <text x="790" y="456" text-anchor="end" font-size="15" font-weight="700" fill="#B9770E">0.613</text>
+  <text x="530" y="484" font-size="15" fill="#2C3E50">3.  PTK2 (FAK)</text>
+  <text x="790" y="484" text-anchor="end" font-size="15" font-weight="700" fill="#B9770E">0.532</text>
+
+  <line x1="500" y1="515" x2="790" y2="515" stroke="#F0D6AE" stroke-width="1.5"/>
+
+  <text x="645" y="555" text-anchor="middle" font-size="13" fill="#3B5D75" font-style="italic">Recovers three of the most</text>
+  <text x="645" y="575" text-anchor="middle" font-size="13" fill="#3B5D75" font-style="italic">clinically validated TNBC targets</text>
+  <text x="645" y="595" text-anchor="middle" font-size="13" fill="#3B5D75" font-style="italic">bottom-up, from unrelated evidence</text>
+
+  <!-- ======================================================= -->
+  <!-- COLUMN 3: COMBINATION + PATIENT-SPECIFIC SCORING -->
+  <!-- ======================================================= -->
+  <text x="1055" y="168" text-anchor="middle" font-size="19" font-weight="700" fill="#1E8449">Therapy Prioritization</text>
+
+  <!-- sub-panel A: PairCTS/TripletCTS -->
+  <rect x="895" y="190" width="320" height="185" rx="10" fill="#FFFFFF" stroke="#B7DDBB" stroke-width="1.3"/>
+  <text x="1055" y="216" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1E8449">Cohort-Level: PairCTS / TripletCTS</text>
+  <!-- mini network with two highlighted nodes -->
+  <g transform="translate(940,232)">
+    <circle cx="10" cy="10" r="7" fill="#1E8449"/>
+    <circle cx="60" cy="0" r="7" fill="#A9DFBF"/>
+    <circle cx="90" cy="30" r="7" fill="#1E8449"/>
+    <circle cx="40" cy="45" r="7" fill="#A9DFBF"/>
+    <line x1="10" y1="10" x2="60" y2="0" stroke="#CCD1D1" stroke-width="1.6"/>
+    <line x1="10" y1="10" x2="40" y2="45" stroke="#CCD1D1" stroke-width="1.6"/>
+    <line x1="90" y1="30" x2="60" y2="0" stroke="#229954" stroke-width="2.6"/>
+    <line x1="90" y1="30" x2="40" y2="45" stroke="#CCD1D1" stroke-width="1.6"/>
+  </g>
+  <text x="1055" y="315" text-anchor="middle" font-size="12.5" fill="#4D6157">Target evidence &#43; community</text>
+  <text x="1055" y="333" text-anchor="middle" font-size="12.5" fill="#4D6157">complementarity &#43; crosstalk &#8722; toxicity</text>
+  <text x="1055" y="358" text-anchor="middle" font-size="12" fill="#7A8A72" font-style="italic">complementarity dominates crosstalk (&#961;=0.49 vs 0.98)</text>
+
+  <!-- sub-panel B: HCOS -->
+  <rect x="895" y="395" width="320" height="415" rx="10" fill="#FFFFFF" stroke="#B7DDBB" stroke-width="1.3"/>
+  <text x="1055" y="421" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1E8449">Patient-Specific: MDCOE / HCOS</text>
+
+  <!-- person icon -->
+  <g transform="translate(1020,435)">
+    <circle cx="17" cy="13" r="13" fill="#A9DFBF" stroke="#1E8449" stroke-width="2"/>
+    <path d="M0,50 C0,32 34,32 34,50 Z" fill="#A9DFBF" stroke="#1E8449" stroke-width="2"/>
+  </g>
+  <text x="1055" y="505" text-anchor="middle" font-size="13" fill="#2C3E50">Focal patient TCGA-AO-A128</text>
+  <text x="1055" y="524" text-anchor="middle" font-size="12" fill="#7A8A72">HER2-mut &#8226; PTEN-null &#8226; TP53-mut</text>
+
+  <rect x="920" y="540" width="270" height="66" rx="8" fill="#EAFAF1" stroke="#82C99A" stroke-width="1.3"/>
+  <text x="1055" y="562" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1E8449">Afatinib &#43; Alpelisib &#43; Trastuzumab</text>
+  <text x="1055" y="580" text-anchor="middle" font-size="12.5" fill="#4D6157">(tied: Afatinib &#43; Capivasertib &#43; Trastuzumab)</text>
+  <text x="1055" y="598" text-anchor="middle" font-size="14" font-weight="700" fill="#1E8449">HCOS &#61; 0.450</text>
+
+  <line x1="920" y1="624" x2="1190" y2="624" stroke="#D2E8D6" stroke-width="1.3"/>
+
+  <text x="1055" y="655" text-anchor="middle" font-size="14" font-weight="700" fill="#1E8449">Cohort-wide (n&#61;59 eligible patients)</text>
+
+  <!-- small grid of 59 dots, colored to suggest heterogeneity -->
+  <g transform="translate(935,668)">
+    <!-- 10 columns x 6 rows-ish, 59 dots -->
+  </g>
+  <!-- generate grid programmatically-like by hand: 10x6 = 60, drop 1 -->
+  <g transform="translate(935,668)" id="cohortgrid">
+    <circle cx="0" cy="0" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="27" cy="0" r="8" fill="#E67E22" opacity="0.92"/>
+    <circle cx="54" cy="0" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="81" cy="0" r="8" fill="#7B1FA2" opacity="0.92"/>
+    <circle cx="108" cy="0" r="8" fill="#E67E22" opacity="0.92"/>
+    <circle cx="135" cy="0" r="8" fill="#7B1FA2" opacity="0.92"/>
+    <circle cx="162" cy="0" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="189" cy="0" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="216" cy="0" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="243" cy="0" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="0" cy="27" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="27" cy="27" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="54" cy="27" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="81" cy="27" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="108" cy="27" r="8" fill="#148F91" opacity="0.92"/>
+    <circle cx="135" cy="27" r="8" fill="#E67E22" opacity="0.92"/>
+    <circle cx="162" cy="27" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="189" cy="27" r="8" fill="#7B1FA2" opacity="0.92"/>
+    <circle cx="216" cy="27" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="243" cy="27" r="8" fill="#7B1FA2" opacity="0.92"/>
+    <circle cx="0" cy="54" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="27" cy="54" r="8" fill="#E67E22" opacity="0.92"/>
+    <circle cx="54" cy="54" r="8" fill="#7B1FA2" opacity="0.92"/>
+    <circle cx="81" cy="54" r="8" fill="#148F91" opacity="0.92"/>
+    <circle cx="108" cy="54" r="8" fill="#E67E22" opacity="0.92"/>
+    <circle cx="135" cy="54" r="8" fill="#148F91" opacity="0.92"/>
+    <circle cx="162" cy="54" r="8" fill="#7B1FA2" opacity="0.92"/>
+    <circle cx="189" cy="54" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="216" cy="54" r="8" fill="#7B1FA2" opacity="0.92"/>
+    <circle cx="243" cy="54" r="8" fill="#E67E22" opacity="0.92"/>
+    <circle cx="0" cy="81" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="27" cy="81" r="8" fill="#148F91" opacity="0.92"/>
+    <circle cx="54" cy="81" r="8" fill="#E67E22" opacity="0.92"/>
+    <circle cx="81" cy="81" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="108" cy="81" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="135" cy="81" r="8" fill="#E67E22" opacity="0.92"/>
+    <circle cx="162" cy="81" r="8" fill="#E67E22" opacity="0.92"/>
+    <circle cx="189" cy="81" r="8" fill="#7B1FA2" opacity="0.92"/>
+    <circle cx="216" cy="81" r="8" fill="#E67E22" opacity="0.92"/>
+    <circle cx="243" cy="81" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="0" cy="108" r="8" fill="#148F91" opacity="0.92"/>
+    <circle cx="27" cy="108" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="54" cy="108" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="81" cy="108" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="108" cy="108" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="135" cy="108" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="162" cy="108" r="8" fill="#7B1FA2" opacity="0.92"/>
+    <circle cx="189" cy="108" r="8" fill="#148F91" opacity="0.92"/>
+    <circle cx="216" cy="108" r="8" fill="#7B1FA2" opacity="0.92"/>
+    <circle cx="243" cy="108" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="0" cy="135" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="27" cy="135" r="8" fill="#7B1FA2" opacity="0.92"/>
+    <circle cx="54" cy="135" r="8" fill="#148F91" opacity="0.92"/>
+    <circle cx="81" cy="135" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="108" cy="135" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="135" cy="135" r="8" fill="#7B1FA2" opacity="0.92"/>
+    <circle cx="162" cy="135" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="189" cy="135" r="8" fill="#1E8449" opacity="0.92"/>
+    <circle cx="216" cy="135" r="8" fill="#1E8449" opacity="0.92"/>
+  </g>
+
+  <text x="1055" y="770" text-anchor="middle" font-size="12.5" fill="#4D6157">25 distinct top regimens &#8226; 58/59 TP53-altered</text>
+  <text x="1055" y="789" text-anchor="middle" font-size="12.5" fill="#4D6157">21/59 (36%) negative top score, reported plainly</text>
+
+  <!-- ======================================================= -->
+  <!-- COLUMN 4: RIGOROUS VALIDATION -->
+  <!-- ======================================================= -->
+  <text x="1465" y="168" text-anchor="middle" font-size="19" font-weight="700" fill="#117864">Rigorous Validation</text>
+
+  <!-- checklist items -->
+  <g font-size="13.5" fill="#1B4F4C">
+    <!-- item 1 -->
+    <circle cx="1315" cy="205" r="11" fill="#148F91"/>
+    <path d="M1310,205 l4,4 l7,-8" stroke="white" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1335" y="202" font-weight="700" fill="#117864">Reproducibility</text>
+    <text x="1335" y="220" font-size="12" fill="#4D6E6C">CTS exact to 8&#215;10&#8315;&#185;&#8311;; PairCTS</text>
+    <text x="1335" y="236" font-size="12" fill="#4D6E6C">and HCOS reproduced exactly</text>
+
+    <!-- item 2 -->
+    <circle cx="1315" cy="272" r="11" fill="#148F91"/>
+    <path d="M1310,272 l4,4 l7,-8" stroke="white" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1335" y="269" font-weight="700" fill="#117864">Weight-perturbation robustness</text>
+    <text x="1335" y="287" font-size="12" fill="#4D6E6C">1,000 random draws: CTS &#961;&#8776;0.94,</text>
+    <text x="1335" y="303" font-size="12" fill="#4D6E6C">PairCTS &#961;&#8776;0.91 (top-20 more sensitive)</text>
+
+    <!-- item 3 -->
+    <circle cx="1315" cy="339" r="11" fill="#148F91"/>
+    <path d="M1310,339 l4,4 l7,-8" stroke="white" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1335" y="336" font-weight="700" fill="#117864">Leave-one-out ablation</text>
+    <text x="1335" y="354" font-size="12" fill="#4D6E6C">complementarity dominates crosstalk</text>
+    <text x="1335" y="370" font-size="12" fill="#4D6E6C">(confirmed under STRING &#38; FunMap)</text>
+
+    <!-- item 4 -->
+    <circle cx="1315" cy="406" r="11" fill="#148F91"/>
+    <path d="M1310,406 l4,4 l7,-8" stroke="white" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1335" y="403" font-weight="700" fill="#117864">Null-model testing</text>
+    <text x="1335" y="421" font-size="12" fill="#4D6E6C">3 permutation models, reported</text>
+    <text x="1335" y="437" font-size="12" fill="#4D6E6C">honestly &#8212; mixed, not oversold</text>
+  </g>
+
+  <rect x="1300" y="465" width="320" height="118" rx="8" fill="#FFFFFF" stroke="#B7E0E2" stroke-width="1.3"/>
+  <text x="1460" y="490" text-anchor="middle" font-size="12.5" font-weight="700" fill="#117864">Null model &#8226; empirical p</text>
+  <text x="1320" y="514" font-size="12" fill="#2C3E50">CTS-value shuffle</text>
+  <text x="1600" y="514" text-anchor="end" font-size="12" font-weight="700" fill="#148F91">p&#61;0.039</text>
+  <text x="1320" y="536" font-size="12" fill="#2C3E50">Network randomization</text>
+  <text x="1600" y="536" text-anchor="end" font-size="12" font-weight="700" fill="#7A8A92">p&#61;0.935</text>
+  <text x="1320" y="558" font-size="12" fill="#2C3E50">Drug-target reassignment</text>
+  <text x="1600" y="558" text-anchor="end" font-size="12" font-weight="700" fill="#7A8A92">p&#61;0.998</text>
+
+  <line x1="1300" y1="600" x2="1620" y2="600" stroke="#B7E0E2" stroke-width="1.3"/>
+
+  <text x="1460" y="632" text-anchor="middle" font-size="14" font-weight="700" fill="#117864">A transparent framework for</text>
+  <text x="1460" y="654" text-anchor="middle" font-size="14" font-weight="700" fill="#117864">orthogonal evidence integration</text>
+  <text x="1460" y="684" text-anchor="middle" font-size="12.5" fill="#4D6E6C">&#8212; not a claimed efficacy predictor,</text>
+  <text x="1460" y="702" text-anchor="middle" font-size="12.5" fill="#4D6E6C">and not oversold as one</text>
+
+  <!-- small icon: DepMap/CPTAC/FunMap/TCGA orthogonal check marks -->
+  <g transform="translate(1320,730)" font-size="11.5" fill="#4D6E6C">
+    <circle cx="6" cy="0" r="4" fill="#148F91"/><text x="16" y="4">DepMap &#8594; essentiality</text>
+    <circle cx="6" cy="24" r="4" fill="#148F91"/><text x="16" y="28">CPTAC / FunMap &#8594; network</text>
+    <circle cx="6" cy="48" r="4" fill="#148F91"/><text x="16" y="52">DGIdb &#8594; druggability</text>
+    <circle cx="6" cy="72" r="4" fill="#148F91"/><text x="16" y="76">TCGA survival &#8594; clinical relevance</text>
+  </g>
+
+  <!-- ============ FOOTER ============ -->
+  <text x="850" y="850" text-anchor="middle" font-size="13.5" fill="#5B6B73" font-style="italic">
+    Rankings are experimentally testable hypotheses for wet-lab evaluation, not clinical recommendations.
+  </text>
+</svg>
