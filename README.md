@@ -1,7 +1,5 @@
 ![banner](docs/banner-v2.png)
 
-![banner](docs/banner-v2.png)
-
 # TNBC Kinase-Redundancy, Drug-Regimen, and Cohort-Scale ML Project
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
