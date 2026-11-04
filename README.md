@@ -18,6 +18,99 @@ HCOS evaluation (Track D), and a full robustness/ablation/null-model validation 
 <img width="756" height="378" alt="image" src="https://github.com/user-attachments/assets/88708464-c17a-4d23-8c15-2bdd78153aaa" />
 
 
+## Contents
+
+- [Introduction](#introduction)
+- [Methods](#methods)
+- [Results](#results)
+- [Discussion](#discussion)
+- [Revised manuscript and figures](#revised-manuscript-and-figures)
+- [Project scope](#project-scope)
+- [Cohort-wide HCOS evaluation](#cohort-wide-hcos-evaluation-n59)
+- [Robustness, ablation, and null-model validation](#robustness-ablation-and-null-model-validation)
+- [Subprojects](#subprojects-in-this-repository)
+- [Repository layout](#repository-layout)
+- [Getting started](#getting-started)
+- [Research principles](#principles-we-follow-on-this-project)
+
+## Introduction
+
+Triple-negative breast cancer (TNBC) lacks estrogen-receptor, progesterone-receptor, and HER2-amplification-defined treatment targets and exhibits molecular heterogeneity and compensatory signaling. This motivates computational prioritization of **combination-therapy hypotheses** rather than assuming that inhibiting a single kinase will suppress redundant signaling routes.
+
+This project develops a **network-informed, multi-omic framework** that integrates kinase interaction networks, functional dependency, clinical outcome associations, drug-target knowledge, and safety signals. It separates **cohort-level kinase and combination scoring** (CTS, PairCTS, TripletCTS) from **patient-specific hypothesis generation** (MDCOE/HCOS). It is a research prioritization system, **not a clinically validated treatment recommender or an efficacy predictor**.
+
+## Methods
+
+### Study design and data integration
+
+The analysis combines TCGA-BRCA clinical, transcriptomic, and mutation data; DepMap CRISPR dependency data from 25 TNBC cell lines; STRING protein-association networks; DGIdb drug–gene interactions; openFDA FAERS safety signals; CPTAC breast-cancer proteomics; and the FunMap functional network. The main analysis uses a **90-kinase RTK/NRTK panel**. PAM50 basal-like status is a *proxy* for TNBC in the TCGA cohort and should not be conflated with receptor-confirmed TNBC.
+
+### Cohort screening and patient-level analysis
+
+A participant-level reconstruction yielded 1,087 TCGA-BRCA participants with subtype information, 192 PAM50 basal-like participants, 168 with eligible mutation data, and **18** with at least two candidate drug-mapped altered panel genes using the DGIdb-restricted criterion. A separate, independently defined MDCOE `GENE_DRUGS` mapping yielded **59** eligible patients. These **18- and 59-person cohorts use different druggability definitions** and must not be treated as equivalent denominators.
+
+### Target and combination scoring
+
+The Composite Target Score (CTS) integrates four normalized evidence layers:
+
+`CTS = 0.30 × network centrality + 0.25 × essentiality + 0.25 × survival association + 0.20 × druggability`
+
+PairCTS combines two target scores, Louvain-community complementarity, and network crosstalk; TripletCTS adds module coverage, escape-route closure, non-redundancy, and a toxicity penalty. MDCOE/HCOS separately ranks patient-specific drug regimens using mutation-informed targets, evidence, predicted synergy, regimen-size effects, and safety/overlap penalties. These scores rank hypotheses and are not measured drug-response probabilities.
+
+### Independent validation and robustness
+
+- **DepMap:** Compare gene-identity and per-sample multi-omic predictors of CRISPR dependency; retain cohort-level mean dependency in CTS.
+- **CPTAC × STRING:** Calculate Pearson correlations for all 276 pairs among 24 measured kinases across 151 BRCA-wide samples; apply Benjamini–Hochberg FDR across **all 276 tests** before comparison with filtered STRING edges.
+- **FunMap × STRING:** Compare network coverage, edge intersection/union, and sensitivity of PairCTS rankings to network substitution.
+- **Sensitivity:** Recompute scores from components, perturb scoring weights in 1,000 trials, perform leave-one-component-out ablations, assess kinase-panel exclusions, and evaluate permutation null models.
+
+## Results
+
+### Cohort-level kinase and drug-pair prioritization
+
+The highest-ranked CTS kinases included **ERBB2 (0.690), EGFR (0.613), and PTK2/FAK (0.532)**. Independent score reconstruction reproduced all 90 CTS values to floating-point precision (maximum absolute difference approximately `8 × 10⁻¹⁷`). The documented top drug pair, **adavosertib + defactinib**, mapped to **PTK2–TYRO3** (PairCTS **0.509657**). These are *computational rankings*, not demonstrations of clinical benefit.
+
+### Patient-specific and cohort-wide regimen hypotheses
+
+For the illustrative focal case **TCGA-AO-A128**, **afatinib + alpelisib + trastuzumab** and **afatinib + capivasertib + trastuzumab** tied at **HCOS = 0.450**. In the separately defined 59-patient HCOS-eligible basal-like cohort, 25 distinct top-ranked regimens were observed; 58/59 patients carried a TP53 alteration, and 21/59 had a **negative** best HCOS score. The variation supports heterogeneous candidate prioritization, not personalized clinical efficacy.
+
+### Figure 5 — CPTAC proteomic correlations versus STRING edges
+
+![Figure 5: Verified CPTAC–STRING proteomic correlation analysis](figures/figure5/Figure5_CPTAC_STRING_VERIFIED.png)
+
+*Figure 5.* Across **276** measured kinase pairs, **107** were significant after BH correction (`FDR < 0.05`); **44/107 (41.1%)** coincided with filtered STRING edges and **63/107** did not. **ERBB3–ABL1** was among the strongest unmatched correlations (`r = 0.506292`, `p = 3.311 × 10⁻¹¹`, `FDR = 8.60 × 10⁻¹⁰`; fourth by absolute correlation among unmatched pairs). This is **protein co-expression in a BRCA-wide cohort**, not evidence by itself of direct binding, causality, or TNBC-specific signaling.
+
+[Figure 5 PDF](figures/figure5/Figure5_CPTAC_STRING_VERIFIED.pdf) · [Reproduction script](scripts/validation/reproduce_figure5.py) · [All 276 correlations](results/figure5_verified/all_276_correlations_verified.csv) · [107 FDR-significant pairs](results/figure5_verified/significant_107_correlations_verified.csv) · [Verification summary](results/figure5_verified/summary_verified.csv)
+
+### Figure 7 — Evidence-driven CTS design decisions
+
+![Figure 7: Evidence-driven CTS design and validation](figures/figure7/Figure7_Evidence_Driven_CTS_REDESIGN.png)
+
+*Figure 7.* Three methodological checks informed the retained CTS architecture. **Subtype clustering** showed weak silhouette separation (`0.070`, `0.058`, `0.025`) and was not added as a fifth CTS layer. **DepMap** gene-identity prediction (`R² = 0.337`) outperformed the per-sample multi-omic model (`R² = −0.029`), supporting a cohort-level essentiality representation. **Network comparison** found **464 STRING** edges and **3,081 FunMap** edges, with **394 shared** out of **3,151 unique** (`Jaccard = 12.50%`), showing that these are not interchangeable sources of network evidence.
+
+### Robustness and falsification checks
+
+CTS weight-perturbation ranks were relatively stable (mean Spearman `ρ = 0.94` over 1,000 draws). PairCTS was more sensitive to removal of **community complementarity** (`ρ = 0.49`) than removal of **network crosstalk** (`ρ = 0.98`). Excluding LMTK2/LMTK3 did not change reported CTS or PairCTS rankings. Null-model findings were mixed: empirical `p = 0.039` for CTS-value shuffle, `0.935` for STRING randomization, `0.601` for FunMap weight shuffle, and `0.998` for drug-target mapping shuffle. **The evidence does not establish superiority to randomized prioritization under all tested null models.**
+
+## Discussion
+
+The framework provides an auditable way to combine heterogeneous molecular, network, and pharmacological evidence while keeping cohort-level and patient-specific tasks separate. Concordance between a subset of CPTAC correlations and STRING edges supports partial biological agreement; the **63 unmatched correlations** also demonstrate why network annotations should not be treated as complete. The marked STRING–FunMap edge divergence further argues for explicit network-source sensitivity analyses rather than assuming interchangeable interaction graphs.
+
+DepMap model comparison supports using **mean gene dependency** as a pragmatic essentiality feature; it does **not** show that the CTS predicts individual patient response. Weak exploratory subtype separation argues against introducing an unsupported fifth CTS feature. Strong score reproducibility is distinct from **biological or clinical validation**: sensitivity and null-model tests show that some rankings depend heavily on the chosen scoring formulation, especially PairCTS community complementarity.
+
+**Key limitations:** PAM50 basal-like is an imperfect TNBC proxy; CPTAC measurements are BRCA-wide; protein correlation is not physical interaction; druggability mappings alter cohort eligibility; FAERS reporting is not a causal toxicity estimate; and the proposed regimens lack prospective functional or clinical efficacy validation. The top-ranked drug combinations should therefore be interpreted strictly as **testable research hypotheses**. Next steps include external cohort replication, prospective perturbation/synergy experiments, and response-labelled validation when suitable data become available.
+
+## Revised manuscript and figures
+
+- [Updated manuscript (Word)](manuscript/TNBC_Manuscript_Updated_Figures_5_and_7.docx)
+- [Figure 5 (PNG)](figures/figure5/Figure5_CPTAC_STRING_VERIFIED.png) and [PDF](figures/figure5/Figure5_CPTAC_STRING_VERIFIED.pdf)
+- [Figure 7 (PNG)](figures/figure7/Figure7_Evidence_Driven_CTS_REDESIGN.png)
+- [Figure 5 verification outputs](results/figure5_verified/)
+
+The sections below retain the original repository-level implementation, subproject, and robustness documentation.
+
+---
+
 ## Project scope
 
 | Track | Question | Population | Status |
