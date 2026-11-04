@@ -1,0 +1,2 @@
+samples,kinases,tested_pairs,significant_bh_fdr_005,string_supported,not_in_string,erbb3_abl1_r,erbb3_abl1_p,erbb3_abl1_bh_fdr,erbb3_abl1_rank_among_unmatched_absr
+151,24,276,107,44,63,0.5062922821529912,3.311181725437354e-11,8.599013319115352e-10,4
